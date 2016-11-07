@@ -7,11 +7,18 @@ use App\Http\Controllers\Controller;
 
 class FrontController extends Controller
 {
-    public function index(){
+        public function index(){
 
 
+            return view('front/index');
+        }
 
+        public function registration(){
 
-        return view('index');
+            return view('front/registration');
+        }
+        public function registrationProcess(){
+
+        return view('front/registration');
     }
 }
