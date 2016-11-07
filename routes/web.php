@@ -22,7 +22,8 @@
     /*
     * Back Routes :
     */
-    
+
+    Route::get('login' , ['as' => 'login' , 'uses' => 'BackController@login']);
 
 
 

@@ -14,4 +14,14 @@ class BackController extends Controller
 
         return view('index');
     }
+
+    public function login()
+    {
+        return view('back/login');
+    }
+
+    public function loginProcess()
+    {
+
+    }
 }
