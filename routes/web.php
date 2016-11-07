@@ -12,7 +12,9 @@
 */
 
 
-    Route::get('/' , ['as' => 'home' , 'uses' => 'IndexController@index']);
+    Route::get('/' , ['as' => 'home' , 'uses' => 'FrontController@index']);
+    Route::get('inscription' , ['as' => 'inscription' , 'uses' => 'FrontController@inscription']);
+
 
 
 
