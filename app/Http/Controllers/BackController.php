@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Login;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -31,8 +32,28 @@ class BackController extends Controller
         return view('back/login');
     }
 
-    public function loginProcess()
+    public function loginProcess(Login $request)
     {
 
+        dd('hi');
+        $login = $request->input('login');
+        $password = $request->input('password');
+
+        $user = User::where('login', $login)->first();
+
+        if (!$user) {
+            return back()->withInput()->with('flash_error', 'Identifiant incorrect.');
+        }
+
+        if (Hash::check($password, $user->password)) {
+            Auth::login($user);
+            return Redirect::route('admin_board');
+        } else {
+            return back()->withInput()->with('flash_error', 'Mot de passe incorrect.');
+        }
+        \App::abort(404);
+
+
+        return view('back/index');
     }
 }

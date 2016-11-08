@@ -2,13 +2,21 @@
 
 @section('content')
 
-    <div class="col-md-4 col-md-offset-4">
+    <div class="row" id="subscription-form">
 
-        <?= Former::open()->class('form_horizontal')->method('GET') ?>
-        <?= Former::text('login')->label(false)->placeholder('Login')->required() ?>
-        <?= Former::password('password')->label(false)->placeholder('Mot de Passe')->required() ?>
-        <?= Former::close() ?>
+        <div class="col-md-4 col-md-offset-4">
 
+            <h2>Connexion à l'admin :</h2>
+
+            <?= Former::open(route('login_process'))->class('form_horizontal')->method('GET') ?>
+            <?= Former::text('login')->label(false)->placeholder('Login')->required() ?>
+            <?= Former::password('password')->label(false)->placeholder('Mot de Passe')->required() ?>
+            <button type="submit" class="btn btn-primary">
+                <i class="fa fa-btn fa-user"></i> Connexion
+            </button>
+            <?= Former::close() ?>
+
+        </div>
     </div>
 @endsection
 

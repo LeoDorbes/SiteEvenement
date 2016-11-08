@@ -22,6 +22,7 @@
     * Back Routes :
     */
 
+    Route::post('login' , ['as' => 'login_process' , 'uses' => 'BackController@loginProcess']);
     Route::get('premier-utilisateur' , ['as' => 'first_account' , 'uses' => 'BackController@firstUser']);
     Route::get('admin' , ['as' => 'login' , 'uses' => 'BackController@login']);
 
