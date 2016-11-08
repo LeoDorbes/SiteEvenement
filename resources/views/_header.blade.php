@@ -1,31 +1,58 @@
-<!DOCTYPE html>
-<html>
-<head lang="fr">
-    <meta charset="UTF-8">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link href="css/main.css" rel="stylesheet">
+==================================================
+Header Section Start
+================================================== -->
+<header id="top-bar" class="navbar-fixed-top animated-header">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- responsive nav button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- /responsive nav button -->
 
-    <title>Projet Evenement</title>
-</head>
-<body>
-
-<div class="row">
-    <div class="header col-md-8 col-md-offset-2">
-        <li>
-            <ul><a href="{{route('home')}}"> Home </a></ul>
-            <ul><a href="{{route('registration')}}"> Inscription </a></ul>
-            <ul></ul>
-            <ul></ul>
-        </li>
+            <!-- logo -->
+            <div class="navbar-brand">
+                <a href="index.html" >
+                    <img src="images/logo.png" alt="">
+                </a>
+            </div>
+            <!-- /logo -->
+        </div>
+        <!-- main menu -->
+        <nav class="collapse navbar-collapse navbar-right" role="navigation">
+            <div class="main-menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{{ route('home') }}" >Acceuil</a>
+                    </li>
+                    <li><a href="{{ route('registration') }}">S'inscrire</a></li>
+                    {{--<li><a href="service.html">Service</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <span class="caret"></span></a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="404.html">404 Page</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span class="caret"></span></a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="blog-fullwidth.html">Blog Full</a></li>
+                                <li><a href="blog-left-sidebar.html">Blog Left sidebar</a></li>
+                                <li><a href="blog-right-sidebar.html">Blog Right sidebar</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>--}}
+                </ul>
+            </div>
+        </nav>
+        <!-- /main nav -->
     </div>
-</div>
-
-@yield('content')
-
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-</body>
-
-
-</html>
+</header>
