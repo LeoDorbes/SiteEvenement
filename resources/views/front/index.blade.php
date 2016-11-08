@@ -28,7 +28,7 @@
                         <h2 class="wow fadeInUp animated" data-wow-delay=".6s">
                             Notre concours existe depuis 2008, avec plus de 1200 partipants à l'édition de Janvier 2016,
                             <br>
-                             il a, depuis sa création, su retenir l'attention de nombreuses entreprises partenaires.
+                            il a, depuis sa création, su retenir l'attention de nombreuses entreprises partenaires.
                         </h2>
                         <a class="btn-lines dark light wow fadeInUp animated smooth-scroll btn btn-default btn-green"
                            data-wow-delay=".9s" href="#works" data-section="#works">Voir les partenaires</a>
