@@ -1089,6 +1089,10 @@ article {
 /*--------------------------- Nicolas && Léo -----------------------------------------*/
 /*------------------------------------------------------------------------------------*/
 
+/* global */
+body{
+  overflow-x: hidden;
+}
 
 /* index */
 
@@ -1100,10 +1104,15 @@ article {
 /* subscribtion */
 
 #subscription-form{
-  padding-top: 13%;
+  padding-top: 7%;
+  background: url('../images/background-form-subscribe3.jpg') no-repeat 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 750px;
 }
-#subscription-form{
-
+#subscription-form .form-li{
+  margin-bottom: 13px;
+  border-radius: 4px;
 }
 
 
