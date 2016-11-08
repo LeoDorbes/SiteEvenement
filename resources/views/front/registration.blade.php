@@ -13,12 +13,14 @@
 
 
                     ->class('form_horizontal')->method('GET') ?>
-            <?= Former::text('first_name')->label(false)->placeholder('Prénom')->required() ?>
-            <?= Former::text('last_name')->label(false)->placeholder('Nom')->required() ?>
-            <?= Former::email('email')->label(false)->placeholder('Email')->required() ?>
-            <?= Former::text('adresse')->label(false)->placeholder('Adresse')->required() ?>
-            <?= Former::text('Ville')->label(false)->placeholder('Ville')->required() ?>
-            <?= Former::text('postal')->label(false)->placeholder('Code Postal')->required() ?>
+            <?= Former::text('first_name')->label(false)->placeholder('Prénom')->required()->class('form-control form-li') ?>
+            <?= Former::text('last_name')->label(false)->placeholder('Nom')->required()->class('form-control form-li') ?>
+            <?= Former::email('email')->label(false)->placeholder('Email')->required()->class('form-control form-li') ?>
+            <?= Former::text('adresse')->label(false)->placeholder('Adresse')->required()->class('form-control form-li') ?>
+            <?= Former::text('Ville')->label(false)->placeholder('Ville')->required()->class('form-control form-li') ?>
+            <?= Former::text('postal')->label(false)->placeholder('Code Postal')->required()->class('form-control form-li') ?>
+            <?= Former::text('job')->label(false)->placeholder('Votre fonction')->class('form-control form-li') ?>
+            <?= Former::textarea('comment')->label(false)->placeholder('Commentaire')->required()->class('form-control form-li') ?>
 
             <button type="submit" class="btn btn-primary">
                 <i class="fa fa-btn fa-user"></i> s'inscrire
