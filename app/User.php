@@ -19,11 +19,14 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be hidden for arrays.
+     * The boot function used to generate actions when the Model is called :
      *
-     * @var array
+     * @function boot
      */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    public static function boot()
+    {
+        User::creating(function ($user) {
+            $user->password = Hash::make($user->password);
+        });
+    }
 }
