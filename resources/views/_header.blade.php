@@ -15,7 +15,7 @@ Header Section Start
 
             <!-- logo -->
             <div class="navbar-brand">
-                <a href="index.html" >
+                <a href="{{ route('home') }}" >
                     <img src="images/logo.png" alt="">
                 </a>
             </div>
@@ -26,7 +26,7 @@ Header Section Start
             <div class="main-menu">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="{{ route('home') }}" >Acceuil</a>
+                        <a href="{{ route('home') }}" >Présentation</a>
                     </li>
                     <li><a href="{{ route('registration') }}">S'inscrire</a></li>
                     {{--<li><a href="service.html">Service</a></li>
