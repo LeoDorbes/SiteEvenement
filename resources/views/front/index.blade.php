@@ -1,7 +1,10 @@
     @extends('_header')
 
     @section('content')
-        <div>hola</div>
+        <p>
+
+            JE SUIS UNE PAGE D'ACCEUIL LOLILOL
+        </p>
     @endsection
 
 

@@ -18,13 +18,11 @@
     Route::get('inscription' , ['as' => 'registration' , 'uses' => 'FrontController@registration']);
     Route::post('inscription/process' , ['as' => 'registration_process' , 'uses' => 'FrontController@registrationProcess']);
 
-
     /*
     * Back Routes :
     */
 
-    Route::get('login' , ['as' => 'login' , 'uses' => 'BackController@login']);
-
+    Route::get('admin' , ['as' => 'login' , 'uses' => 'BackController@login']);
 
 
 
