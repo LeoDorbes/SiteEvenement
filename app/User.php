@@ -29,5 +29,6 @@ class User extends Authenticatable
         User::creating(function ($user) {
             $user->password = Hash::make($user->password);
         });
+
     }
 }

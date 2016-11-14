@@ -14,8 +14,8 @@ class BackController extends Controller
 {
     public function firstUser()
     {
-        $user = User::all();
-        if(count($user) > 0)return back()->with('flash_error', 'Le compte Admin a déjà été crée!');
+        $users = User::all();
+        if(count($users) > 0)return back()->with('flash_error', 'Le compte Admin a déjà été crée!');
         $user = new User();
         $user->email = 'admin@admin.com';
         $user->login = 'admin';
