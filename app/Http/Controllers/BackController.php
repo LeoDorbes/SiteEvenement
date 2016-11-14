@@ -6,6 +6,8 @@ use App\Http\Requests\Login;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 
 class BackController extends Controller
@@ -24,7 +26,7 @@ class BackController extends Controller
 
     public function index(){
 
-        return view('index');
+        return view('front/index');
     }
 
     public function login()
@@ -35,7 +37,7 @@ class BackController extends Controller
     public function loginProcess(Login $request)
     {
 
-        dd('hi');
+
         $login = $request->input('login');
         $password = $request->input('password');
 
@@ -47,7 +49,7 @@ class BackController extends Controller
 
         if (Hash::check($password, $user->password)) {
             Auth::login($user);
-            return Redirect::route('admin_board');
+            return Redirect::route('admin_home');
         } else {
             return back()->withInput()->with('flash_error', 'Mot de passe incorrect.');
         }

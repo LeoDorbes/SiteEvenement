@@ -8,7 +8,7 @@
 
             <h2>Connexion à l'admin :</h2>
 
-            <?= Former::open(route('login_process'))->class('form_horizontal')->method('GET') ?>
+            <?= Former::open(route('login_process'))->class('form_horizontal')->method('POST') ?>
             <?= Former::text('login')->label(false)->placeholder('Login')->required() ?>
             <?= Former::password('password')->label(false)->placeholder('Mot de Passe')->required() ?>
             <button type="submit" class="btn btn-primary">

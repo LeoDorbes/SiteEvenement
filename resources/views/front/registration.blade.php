@@ -5,14 +5,12 @@
     <div class="row" id="subscription-form">
         <div class="col-sm-offset-3 col-sm-6">
             <h2> S'inscrire à l'event </h2>
-            <?= Former::open()
-                    ->rules(array(
-                           'postal' => ''
+            <?= Former::open_vertical(route('login_process'))->method('POST')
+            ->rules(array(
+                   'postal' => ''
 
-                    ))
-
-
-                    ->class('form_horizontal')->method('GET') ?>
+            ))
+            ->class('form_horizontal') ?>
             <?= Former::text('first_name')->label(false)->placeholder('Prénom')->required()->class('form-control form-li') ?>
             <?= Former::text('last_name')->label(false)->placeholder('Nom')->required()->class('form-control form-li') ?>
             <?= Former::email('email')->label(false)->placeholder('Email')->required()->class('form-control form-li') ?>
