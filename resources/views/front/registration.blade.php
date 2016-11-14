@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="row" id="subscription-form">
+    <div class="row form subscription-form">
         <div class="col-sm-offset-3 col-sm-6">
             <h2> S'inscrire à l'event </h2>
             <?= Former::open_vertical(route('login_process'))->method('POST')

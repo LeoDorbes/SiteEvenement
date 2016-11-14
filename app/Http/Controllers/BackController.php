@@ -22,6 +22,8 @@ class BackController extends Controller
         $user->password = 'admin123';
         $user->save();
         return Redirect::route('home')->with('flash_success', 'Le compte Admin a été crée : LOGIN => admin --- MDP => admin123');
+
+      
     }
 
     public function index(){
