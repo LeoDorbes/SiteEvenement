@@ -5,7 +5,7 @@
     <div class="row form subscription-form">
         <div class="col-sm-offset-3 col-sm-6">
             <h2> S'inscrire à l'event </h2>
-            <?= Former::open_vertical(route('login_process'))->method('POST')
+            <?= Former::open_vertical(route('registration_process'))->method('POST')
             ->rules(array(
                    'postal' => ''
 
