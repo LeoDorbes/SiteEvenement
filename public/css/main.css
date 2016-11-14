@@ -1103,14 +1103,14 @@ body{
 
 /* subscribtion */
 
-#subscription-form{
+.subscription-form{
   padding-top: 7%;
   background: url('../images/background-form-subscribe3.jpg') no-repeat 50%;
   background-size: cover;
   background-attachment: fixed;
   height: 750px;
 }
-#subscription-form .form-li{
+.form .form-li{
   margin-bottom: 13px;
   border-radius: 4px;
 }
@@ -1122,5 +1122,11 @@ body{
 
 /* after subscription */
 
+
+/* login */
+
+#bouton-login{
+  margin-left: 13px;
+}
 
 
