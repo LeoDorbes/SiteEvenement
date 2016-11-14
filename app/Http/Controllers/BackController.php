@@ -37,7 +37,6 @@ class BackController extends Controller
     public function loginProcess(Login $request)
     {
 
-
         $login = $request->input('login');
         $password = $request->input('password');
 
