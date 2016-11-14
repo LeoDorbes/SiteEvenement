@@ -21,7 +21,6 @@ class CreateSubriptionsTable extends Migration
             $table->string('address');
             $table->string('city');
             $table->string('postal_code');
-            $table->string('last_name');
             $table->string('position'); 
             $table->text('comment');
 
