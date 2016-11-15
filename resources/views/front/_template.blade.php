@@ -2,9 +2,9 @@
 <html class="no-js">
 @include('_head')
 <body>
-@include('_header')
+@include('front._header')
 @include('_flash')
 @yield('content')
-@include('_footer')
+@include('front._footer')
 </body>
 </html>

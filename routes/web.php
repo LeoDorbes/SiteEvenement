@@ -22,14 +22,14 @@ Route::post('inscription/process', ['as' => 'registration_process', 'uses' => 'F
 * Back Routes :
 */
 
-Route::post('login', ['as' => 'login_process', 'uses' => 'BackController@loginProcess']);
+Route::post('login', ['as' => 'login_process', 'uses' => 'FrontController@loginProcess']);
 Route::get('premier-utilisateur', ['as' => 'first_account', 'uses' => 'BackController@firstUser']);
-Route::get('admin', ['as' => 'login', 'uses' => 'BackController@login']);
+Route::get('admin', ['as' => 'login', 'uses' => 'FrontController@login']);
 Route::get('admin/index', ['as' => 'admin_home', 'uses' => 'BackController@index']);
 
-Route::get('admin/index/subscriptions', ['as' => 'admin_subscriptions', 'uses' => 'BackController@subscriptions']);
-Route::get('admin/edit/subscription/{id}', ['as' => 'admin_edit_subscription', 'uses' => 'BackController@editSubscription']);
-Route::post('admin/edit/subscription/{id}/process', ['as' => 'admin_edit_subscription_process', 'uses' => 'BackController@editSubscriptionProcess']);
-Route::get('admin/add/subscription', ['as' => 'admin_add_subscription', 'uses' => 'BackController@addSubscription']);
-Route::post('admin/add/subscription/process', ['as' => 'admin_add_subscription_process', 'uses' => 'BackController@addSubscriptionProcess']);
-Route::get('admin/delete/subscription/{id}', ['as' => 'admin_delete_subscription_process', 'uses' => 'BackController@deleteSubscriptionProcess']);
+Route::get('admin/index/inscriptions', ['as' => 'admin_registrations', 'uses' => 'BackController@registrations']);
+Route::get('admin/edit/inscription/{id}', ['as' => 'admin_edit_registration', 'uses' => 'BackController@editRegistration']);
+Route::post('admin/edit/inscription/{id}/process', ['as' => 'admin_edit_registration_process', 'uses' => 'BackController@editRegistrationProcess']);
+Route::get('admin/add/inscription', ['as' => 'admin_add_registration', 'uses' => 'BackController@addRegistration']);
+Route::post('admin/add/inscription/process', ['as' => 'admin_add_registration_process', 'uses' => 'BackController@addRegistrationProcess']);
+Route::get('admin/delete/inscription/{id}', ['as' => 'admin_delete_registration_process', 'uses' => 'BackController@deleteRegistrationProcess']);

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Login;
+use App\Registration;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -28,59 +29,32 @@ class BackController extends Controller
 
     public function index(){
 
-        return view('front/index');
-    }
-
-    public function login()
-    {
-        return view('back/login');
-    }
-
-    public function loginProcess(Login $request)
-    {
-
-        $login = $request->input('login');
-        $password = $request->input('password');
-
-        $user = User::where('login', $login)->first();
-
-        if (!$user) {
-            return back()->withInput()->with('flash_error', 'Identifiant incorrect.');
-        }
-
-        if (Hash::check($password, $user->password)) {
-            Auth::login($user);
-            return Redirect::route('admin_home');
-        } else {
-            return back()->withInput()->with('flash_error', 'Mot de passe incorrect.');
-        }
-        \App::abort(404);
-
-
         return view('back/index');
     }
+    /*
+     * The list of all the registrations :
+     */
+    public function registrations(){
 
-    public function subscriptions(){
-        // on recupere toute la table subscription et on la passe à la vue
-
-
+        $registrations = Registration::all();
+        return view('back/registrations')->with('registrations',$registrations);
     }
 
-    public function  editSubscription($id){
+    public function  editRegistration($id){
         // on recupere La subscription d'id ($id) SI elle existe alors on l'envois à la vue
     }
-    public function  editSubscriptionProcess($id){
+    public function  editRegistrationProcess($id){
         // on recupere l'id de la subscription , on verifie si elle existe , si oui alors on recupere le POST ,
 
 
     }
-    public  function addSubscription(){
+    public  function addRegistration(){
         // on affiche la vue
     }
-    public function addSubscriptionProcess(){
+    public function addRegistrationProcess(){
             // on recupere le POST , si il est valide alors on l'insére dans la base de donnée
     }
-    public function deleteSubscriptionProcess(){
+    public function deleteRegistrationProcess(){
         // on récupere l'ID et on suprimme l'inscription
     }
 }

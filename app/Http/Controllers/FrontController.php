@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Registration;
 use App\User;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 
 class FrontController extends Controller
 {
@@ -41,5 +42,28 @@ class FrontController extends Controller
         return view('front/registration')->with('flash_success' , 'Votre inscription à bien ete validée. Merci :) ');
     }
 
+    public function login()
+    {
+        return view('front/login');
+    }
+
+    public function loginProcess(\App\Http\Requests\Login $request)
+    {
+        $login = $request->input('login');
+        $password = $request->input('password');
+
+        $user = User::where('login', $login)->first();
+
+        if (!$user) {
+            return back()->withInput()->with('flash_error', 'Identifiant incorrect.');
+        }
+
+        if (Hash::check($password, $user->password)) {
+            Auth::login($user);
+            return Redirect::route('admin_home');
+        } else {
+            return back()->withInput()->with('flash_error', 'Mot de passe incorrect.');
+        }
+    }
 
 }
