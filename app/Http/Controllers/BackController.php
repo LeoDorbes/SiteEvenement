@@ -59,4 +59,27 @@ class BackController extends Controller
 
         return view('back/index');
     }
+
+    public function subscriptions(){
+        // on recupere toute la table subscription et on la passe à la vue
+
+    }
+
+    public function  editSubscription($id){
+        // on recupere La subscription d'id ($id) SI elle existe alors on l'envois à la vue
+    }
+    public function  editSubscriptionProcess($id){
+        // on recupere l'id de la subscription , on verifie si elle existe , si oui alors on recupere le POST ,
+        // on blinde le POST et si le POST est valide on enregistre la nouvelle subscription
+
+    }
+    public  function addSubscription(){
+        // on affiche la vue
+    }
+    public function addSubscriptionProcess(){
+            // on recupere le POST , si il est valide alors on l'insére dans la base de donnée
+    }
+    public function deleteSubscriptionProcess(){
+        // on récupere l'ID et on suprimme l'inscription
+    }
 }

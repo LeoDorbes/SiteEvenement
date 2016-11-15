@@ -26,11 +26,12 @@ Route::post('login', ['as' => 'login_process', 'uses' => 'BackController@loginPr
 Route::get('premier-utilisateur', ['as' => 'first_account', 'uses' => 'BackController@firstUser']);
 Route::get('admin', ['as' => 'login', 'uses' => 'BackController@login']);
 Route::get('admin/index', ['as' => 'admin_home', 'uses' => 'BackController@index']);
+
 Route::get('admin/index/subscriptions', ['as' => 'admin_subscriptions', 'uses' => 'BackController@subscriptions']);
 Route::get('admin/edit/subscription/{id}', ['as' => 'admin_edit_subscription', 'uses' => 'BackController@editSubscription']);
 Route::post('admin/edit/subscription/{id}/process', ['as' => 'admin_edit_subscription_process', 'uses' => 'BackController@editSubscriptionProcess']);
-Route::get('admin/add/subscription/{id}', ['as' => 'admin_add_subscription', 'uses' => 'BackController@addSubscription']);
-Route::post('admin/add/subscription/{id}/process', ['as' => 'admin_add_subscription_process', 'uses' => 'BackController@addSubscription']);
+Route::get('admin/add/subscription', ['as' => 'admin_add_subscription', 'uses' => 'BackController@addSubscription']);
+Route::post('admin/add/subscription/process', ['as' => 'admin_add_subscription_process', 'uses' => 'BackController@addSubscriptionProcess']);
 Route::get('admin/delete/subscription/{id}', ['as' => 'admin_delete_subscription_process', 'uses' => 'BackController@deleteSubscriptionProcess']);
 
 
