@@ -1093,6 +1093,10 @@ article {
 body{
   overflow-x: hidden;
 }
+#logo{
+  position: relative;
+  top: -19px;
+}
 
 /* index */
 
