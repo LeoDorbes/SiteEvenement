@@ -63,6 +63,7 @@ class BackController extends Controller
     public function subscriptions(){
         // on recupere toute la table subscription et on la passe à la vue
 
+
     }
 
     public function  editSubscription($id){
@@ -70,7 +71,7 @@ class BackController extends Controller
     }
     public function  editSubscriptionProcess($id){
         // on recupere l'id de la subscription , on verifie si elle existe , si oui alors on recupere le POST ,
-        // on blinde le POST et si le POST est valide on enregistre la nouvelle subscription
+
 
     }
     public  function addSubscription(){
