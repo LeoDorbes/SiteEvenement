@@ -16,7 +16,7 @@ Header Section Start
             <!-- logo -->
             <div class="navbar-brand">
                 <a href="{{ route('home') }}" >
-                    <img id="logo" src="images/logo2.png" alt="">
+                    <img id="logo" src="{{ \URL::asset('images/logo2.png') }}" alt="">
                    {{-- <img src="images/logo4.png" alt="">--}}
                 </a>
             </div>

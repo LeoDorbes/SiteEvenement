@@ -33,6 +33,3 @@ Route::post('admin/edit/subscription/{id}/process', ['as' => 'admin_edit_subscri
 Route::get('admin/add/subscription', ['as' => 'admin_add_subscription', 'uses' => 'BackController@addSubscription']);
 Route::post('admin/add/subscription/process', ['as' => 'admin_add_subscription_process', 'uses' => 'BackController@addSubscriptionProcess']);
 Route::get('admin/delete/subscription/{id}', ['as' => 'admin_delete_subscription_process', 'uses' => 'BackController@deleteSubscriptionProcess']);
-
-
-

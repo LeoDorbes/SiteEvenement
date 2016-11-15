@@ -3,7 +3,7 @@
     ================================================== -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="{{ \URL::asset('images/favicon.png') }}">
     <title>Timer Agency Template</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -16,20 +16,20 @@
     <!-- Template CSS Files
     ================================================== -->
     <!-- Twitter Bootstrs CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ \URL::asset('css/bootstrap.min.css') }}">
     <!-- Ionicons Fonts Css -->
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href=" {{ \URL::asset('css/ionicons.min.css') }}">
     <!-- animate css -->
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="{{ \URL::asset('css/animate.css') }}">
     <!-- Hero area slider css-->
-    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="{{ \URL::asset('css/slider.css') }}">
     <!-- owl craousel css -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href=" {{ \URL::asset('css/owl.carousel.css') }}" >
+    <link rel="stylesheet" href="{{ \URL::asset('css/owl.theme.css') }}">
+    <link rel="stylesheet" href="{{ \URL::asset('css/jquery.fancybox.css') }}">
     <!-- template main css file -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="{{ \URL::asset('css/main.css') }}">
     <!-- responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{{ \URL::asset('css/responsive.css') }}">
 
 </head>
