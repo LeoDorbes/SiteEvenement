@@ -60,22 +60,24 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="block wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="500ms">
-                            <h2>
-                                ABOUT ME
+                            <h2> A Propos
                             </h2>
 
                             <p>
-                                Hello, I’m a UI/UX Designer & Front End Developer from Victoria, Australia. I hold a
-                                master
-                                degree of Web Design from the World University.And scrambled it to make a type specimen
-                                book. It has survived not only five centuries
+                                Fondé en 2008 par Thomas Terriel et Mélanie Cotine, le concours Web-Challenge a su federer
+                                depuis lors de nombreux developpeurs débutants et étudiants du monde du Web.
+
+                                L'evenement consiste d'abbord en une phase de selection/developpement en ligne,
+                                puis une grande finale directement à Paris, dans le 14ème arrondissement.
+                                5 gagnants ressortent alors avec une invitation dans les plus grands incubateurs Francais
+                                pour continuer leur projet.
+
                             </p>
 
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, adipisci voluptatum
-                                repudiandae, natus impedit repellat aut officia illum at assumenda iusto reiciendis
-                                placeat.
-                                Temporibus, vero.
+                                La dernière edition à su attirer plus de 1200 participants, 234 projets dont 15 ayant étés selectionnés
+                                pour participer à la grande finale à Paris. Cette dernière a eu lieu le 23 Mars et aura été une formidable
+                                experience pour nos candidats ainsi que nos partenaires.
                             </p>
                         </div>
 
@@ -95,13 +97,11 @@
         <section id="works" class="works">
             <div class="container">
                 <div class="section-heading">
-                    <h1 class="title wow fadeInDown" data-wow-delay=".3s">Latest Works</h1>
+                    <h1 class="title wow fadeInDown" data-wow-delay=".3s">Nos partenaires</h1>
 
                     <p class="wow fadeInDown" data-wow-delay=".5s">
-                        Aliquam lobortis. Maecenas vestibulum mollis diam. Pellentesque auctor neque nec urna. Nulla sit
-                        amet est. Aenean posuere <br> tortor sed cursus feugiat, nunc augue blandit nunc, eu
-                        sollicitudin
-                        urna dolor sagittis lacus.
+
+                        La liste de nos partenaires pour l'édition 2017
                     </p>
                 </div>
                 <div class="row">
@@ -126,7 +126,7 @@
                                 </h4>
 
                                 <p>
-                                    Redesigne UI Concept
+                                    Redesign UI Concept
                                 </p>
                             </figcaption>
                         </figure>

@@ -3,6 +3,7 @@
 @section('content')
 
     Bienvenue dans le backend
+
 @endsection
 
 
