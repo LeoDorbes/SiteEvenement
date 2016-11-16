@@ -5,19 +5,19 @@
 <footer id="footer">
     <div class="container">
         <div class="col-md-8">
-            <p class="copyright">Copyright: <span>2015</span> . Design and Developed by <a
-                        href="http://www.Themefisher.com">Themefisher</a></p>
+            <p class="copyright">Copyright: <span>2016</span> <a
+                        href="#">Web-Challenge</a></p>
         </div>
         <div class="col-md-4">
             <!-- Social Media -->
             <ul class="social">
                 <li>
-                    <a href="http://wwww.fb.com/themefisher" class="Facebook">
+                    <a href="#" class="Facebook">
                         <i class="ion-social-facebook"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="http://wwww.twitter.com/themefisher" class="Twitter">
+                    <a href="#" class="Twitter">
                         <i class="ion-social-twitter"></i>
                     </a>
                 </li>
@@ -27,7 +27,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="http://wwww.fb.com/themefisher" class="Google Plus">
+                    <a href="#" class="Google Plus">
                         <i class="ion-social-googleplus"></i>
                     </a>
                 </li>

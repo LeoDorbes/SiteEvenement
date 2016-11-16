@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Redirect;
 
 class BackController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function firstUser()
     {
         $users = User::all();
@@ -30,6 +36,11 @@ class BackController extends Controller
     public function index(){
 
         return view('back/index');
+    }
+
+    public function logout(){
+        Auth::logout();
+        return Redirect::route('home');
     }
     /*
      * The list of all the registrations :

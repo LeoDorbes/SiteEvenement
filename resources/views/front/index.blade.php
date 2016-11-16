@@ -113,8 +113,8 @@
 
                                 <div class="overlay">
                                     <div class="buttons">
-                                        <a rel="gallery" class="fancybox" href="images/portfolio/item-1.jpg">Demo</a>
-                                        <a target="_blank" href="single-portfolio.html">Details</a>
+                                        <a rel="gallery" href="images/portfolio/item-1.jpg">Orange</a>
+                                        <a target="_blank" href="single-portfolio.html"></a>
                                     </div>
                                 </div>
                             </div>

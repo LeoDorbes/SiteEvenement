@@ -17,12 +17,13 @@
 Route::get('/', ['as' => 'home', 'uses' => 'FrontController@index']);
 Route::get('inscription', ['as' => 'registration', 'uses' => 'FrontController@registration']);
 Route::post('inscription/process', ['as' => 'registration_process', 'uses' => 'FrontController@registrationProcess']);
+Route::post('login', ['as' => 'login_process', 'uses' => 'FrontController@loginProcess']);
 
 /*
 * Back Routes :
 */
 
-Route::post('login', ['as' => 'login_process', 'uses' => 'FrontController@loginProcess']);
+Route::get('admin/logout', ['as' => 'logout_process', 'uses' => 'BackController@logout']);
 Route::get('premier-utilisateur', ['as' => 'first_account', 'uses' => 'BackController@firstUser']);
 Route::get('admin', ['as' => 'login', 'uses' => 'FrontController@login']);
 Route::get('admin/index', ['as' => 'admin_home', 'uses' => 'BackController@index']);
