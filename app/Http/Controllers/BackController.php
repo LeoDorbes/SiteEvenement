@@ -52,7 +52,13 @@ class BackController extends Controller
     }
 
     public function  editRegistration($id){
-        // on recupere La subscription d'id ($id) SI elle existe alors on l'envois à la vue
+
+        $registration = Registration::find($id);
+        if(!$id)\App::abort(404);
+
+        $url = route('admin_edit_registration_process');
+
+        return view('back/registration_form')->with('url',$url)->with('registration',$registration);
     }
     public function  editRegistrationProcess($id){
         // on recupere l'id de la subscription , on verifie si elle existe , si oui alors on recupere le POST ,
@@ -60,12 +66,18 @@ class BackController extends Controller
 
     }
     public  function addRegistration(){
-        // on affiche la vue
+
+        $url = route('admin_add_registration_process');
+        return view('back/registration_form')->with('url',$url);
     }
     public function addRegistrationProcess(){
             // on recupere le POST , si il est valide alors on l'insére dans la base de donnée
     }
-    public function deleteRegistrationProcess(){
-        // on récupere l'ID et on suprimme l'inscription
+    public function deleteRegistrationProcess($id){
+
+        $registration = Registration::find($id);
+        if(!$registration)\App::abort(404);
+        $registration->delete();
+        return Redirect::route('admin_registrations')->with('flash_success', 'L\'inscription a bien été supprimée');
     }
 }

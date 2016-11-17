@@ -121,12 +121,12 @@
                             <figcaption>
                                 <h4>
                                     <a href="#">
-                                        Dew Drop
+                                        Orange
                                     </a>
                                 </h4>
 
                                 <p>
-                                    Redesign UI Concept
+                                    Partenaire depuis 2014
                                 </p>
                             </figcaption>
                         </figure>
