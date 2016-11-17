@@ -56,22 +56,50 @@ class BackController extends Controller
         $registration = Registration::find($id);
         if(!$id)\App::abort(404);
 
-        $url = route('admin_edit_registration_process');
+        $url = route('admin_edit_registration_process',$registration->id);
 
         return view('back/registration_form')->with('url',$url)->with('registration',$registration);
     }
-    public function  editRegistrationProcess($id){
-        // on recupere l'id de la subscription , on verifie si elle existe , si oui alors on recupere le POST ,
+    public function  editRegistrationProcess(\App\Http\Requests\Registration $request, $id){
+
+        $registration = Registration::find($id);
+        if(!$registration)\App::abort(404);
+
+        $registration->first_name = $request->input('first_name');
+        $registration->last_name = $request->input('last_name');
+        $registration->email = $request->input('email');
+        $registration->address = $request->input('address');
+        $registration->city = $request->input('city');
+        $registration->postal_code = $request->input('postal_code');
+        $registration->position = $request->input('position');
+        $registration->comment = $request->input('comment');
+
+        $registration->save();
+        return Redirect::route('admin_registrations')->with('flash_success', 'L\'inscription a bien été modifiée');
 
 
     }
-    public  function addRegistration(){
+    public function addRegistration(){
 
         $url = route('admin_add_registration_process');
         return view('back/registration_form')->with('url',$url);
     }
-    public function addRegistrationProcess(){
-            // on recupere le POST , si il est valide alors on l'insére dans la base de donnée
+    public function addRegistrationProcess(\App\Http\Requests\Registration $request){
+
+        $registration = new Registration();
+        $registration->first_name = $request->input('first_name');
+        $registration->last_name = $request->input('last_name');
+        $registration->email = $request->input('email');
+        $registration->address = $request->input('address');
+        $registration->city = $request->input('city');
+        $registration->postal_code = $request->input('postal_code');
+        $registration->position = $request->input('position');
+        $registration->comment = $request->input('comment');
+
+        //@todo : Gerer erreur BDD -- ajouter les erreur client / serveur
+        $registration->save();
+        return Redirect::route('admin_registrations')->with('flash_success', 'L\'inscription a bien été ajoutée');
+
     }
     public function deleteRegistrationProcess($id){
 

@@ -49,6 +49,13 @@
                 </tbody>
             </table>
 
+            <a href="{{route('admin_add_registration')}}">
+            <button type="submit" class="btn btn-primary">
+
+                    <i class="fa fa-btn fa-user"></i> Ajouter une inscription
+
+            </button>
+            </a>
         </div>
     </div>
 @endsection

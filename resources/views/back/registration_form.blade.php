@@ -3,6 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row">
+            <a href="{{ route('admin_registrations') }}"> retour</a>
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     @if(isset($registration))
@@ -51,7 +52,7 @@
                             <div class="col-md-6 col-md-offset-4">
 
                                 <button type="submit" class="btn btn-primary">
-                                    @if(isset($item))
+                                    @if(isset($registration))
                                         <i class="fa fa-btn fa-user"></i> Modifier l'inscription
                                     @else
                                         <i class="fa fa-btn fa-user"></i> Ajouter l'inscription
