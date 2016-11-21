@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <a href="{{ route('admin_home') }}"> Retour </a>
-
+            <div class="table-responsive">
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr>
@@ -48,7 +48,7 @@
                 @endif
                 </tbody>
             </table>
-
+                </div>
             <a href="{{route('admin_add_registration')}}">
             <button type="submit" class="btn btn-primary">
 

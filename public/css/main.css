@@ -1093,9 +1093,13 @@ article {
 body{
   overflow-x: hidden;
 }
+
 #logo{
   position: relative;
   top: -19px;
+}
+.txtcenter{
+  text-align: center;
 }
 
 /* index */
@@ -1132,4 +1136,11 @@ body{
   margin-left: 13px;
 }
 
+/*** back ****/
+#header-back{
+  margin-bottom: 40px;
+}
+#header-back .fa{
+  margin-right: 3px;
+}
 
