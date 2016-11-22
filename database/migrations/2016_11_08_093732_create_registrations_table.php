@@ -23,7 +23,7 @@ class CreateRegistrationsTable extends Migration
             $table->string('postal_code');
             $table->string('position'); 
             $table->text('comment');
-
+            $table->tinyInteger('validate');
             $table->timestamps();
         });
     }

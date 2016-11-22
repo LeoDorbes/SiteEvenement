@@ -22,7 +22,7 @@ class BackController extends Controller
     public function firstUser()
     {
         $users = User::all();
-        if(count($users) > 0)return back()->with('flash_error', 'Le compte Admin a déjà été crée!');
+        if (count($users) > 0) return back()->with('flash_error', 'Le compte Admin a déjà été crée!');
         $user = new User();
         $user->email = 'admin@admin.com';
         $user->login = 'admin';
@@ -30,40 +30,87 @@ class BackController extends Controller
         $user->save();
         return Redirect::route('home')->with('flash_success', 'Le compte Admin a été crée : LOGIN => admin --- MDP => admin123');
 
-      
+
     }
 
-    public function index(){
+    public function index()
+    {
 
         return view('back/index');
     }
 
-    public function logout(){
+    public function logout()
+    {
         Auth::logout();
         return Redirect::route('home');
     }
+
     /*
      * The list of all the registrations :
      */
-    public function registrations(){
+    public function registrations()
+    {
 
-        $registrations = Registration::all();
-        return view('back/registrations')->with('registrations',$registrations);
+        $registrations = Registration::where('validate','=',0)->paginate(10);
+        return view('back/registrations')->with('registrations', $registrations);
     }
 
-    public function  editRegistration($id){
+    public function validatedRegistrations()
+    {
 
-        $registration = Registration::find($id);
-        if(!$id)\App::abort(404);
-
-        $url = route('admin_edit_registration_process',$registration->id);
-
-        return view('back/registration_form')->with('url',$url)->with('registration',$registration);
+        $registrations = Registration::where('validate','=',1)->paginate(10);
+        return view('back/registrations')->with('registrations', $registrations);
     }
-    public function  editRegistrationProcess(\App\Http\Requests\Registration $request, $id){
+
+    public function refusedRegistrations()
+    {
+
+        $registrations = Registration::where('validate','=',2)->paginate(10);
+        return view('back/registrations')->with('registrations', $registrations);
+    }
+
+    public function validateRegistration($id)
+    {
 
         $registration = Registration::find($id);
-        if(!$registration)\App::abort(404);
+        if (!$registration) \App::abort(404);
+        if($registration->validate != 0)\App::abort(404);
+        $registration->validate = 1;
+        $registration->save();
+
+        return Redirect::route('admin_registrations')->with('flash_success', 'L\'inscription a bien été acceptée');
+
+    }
+
+    public function refuseRegistration($id)
+    {
+
+        $registration = Registration::find($id);
+        if (!$registration) \App::abort(404);
+        if($registration->validate != 0)\App::abort(404);
+        $registration->validate = 2;
+        $registration->save();
+
+        return Redirect::route('admin_registrations')->with('flash_success', 'L\'inscription a bien été acceptée');
+
+    }
+
+    public function  editRegistration($id)
+    {
+
+        $registration = Registration::find($id);
+        if (!$id) \App::abort(404);
+
+        $url = route('admin_edit_registration_process', $registration->id);
+
+        return view('back/registration_form')->with('url', $url)->with('registration', $registration);
+    }
+
+    public function  editRegistrationProcess(\App\Http\Requests\Registration $request, $id)
+    {
+
+        $registration = Registration::find($id);
+        if (!$registration) \App::abort(404);
 
         $registration->first_name = $request->input('first_name');
         $registration->last_name = $request->input('last_name');
@@ -79,12 +126,16 @@ class BackController extends Controller
 
 
     }
-    public function addRegistration(){
+
+    public function addRegistration()
+    {
 
         $url = route('admin_add_registration_process');
-        return view('back/registration_form')->with('url',$url);
+        return view('back/registration_form')->with('url', $url);
     }
-    public function addRegistrationProcess(\App\Http\Requests\Registration $request){
+
+    public function addRegistrationProcess(\App\Http\Requests\Registration $request)
+    {
 
         $registration = new Registration();
         $registration->first_name = $request->input('first_name');
@@ -101,10 +152,12 @@ class BackController extends Controller
         return Redirect::route('admin_registrations')->with('flash_success', 'L\'inscription a bien été ajoutée');
 
     }
-    public function deleteRegistrationProcess($id){
+
+    public function deleteRegistrationProcess($id)
+    {
 
         $registration = Registration::find($id);
-        if(!$registration)\App::abort(404);
+        if (!$registration) \App::abort(404);
         $registration->delete();
         return Redirect::route('admin_registrations')->with('flash_success', 'L\'inscription a bien été supprimée');
     }

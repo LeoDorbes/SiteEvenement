@@ -12,6 +12,8 @@ class Registration extends Model
     protected $table = "registrations";
     protected $primaryKey = "id";
 
+    //Validation : 0 = pending, 1 = accepted, 2 = refused
+
     /**
      * The attributes that are mass assignable.
      *

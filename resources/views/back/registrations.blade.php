@@ -16,8 +16,8 @@
                     <th>Ville</th>
                     <th>Code postal</th>
                     <th>Fonction</th>
-                    <th>Commentaire</th>
-                    <th></th>
+                    {{--<th>Commentaire</th>--}}
+                    <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -31,23 +31,33 @@
                             <td>{{ $registration->city ? $registration->city : '--' }}</td>
                             <td>{{ $registration->postal_code ? $registration->postal_code : '--' }}</td>
                             <td>{{ $registration->position ? $registration->position : '--' }}</td>
-                            <td>{{ $registration->comment ? $registration->comment : '--' }}</td>
+                           {{-- <td>{{ $registration->comment ? $registration->comment : '--' }}</td>--}}
                             <td>
-                                <a href="{{ route('admin_edit_registration',$registration->id) }}" class="btn btn-default btn-xs"
-                                   title="Modifier l'enregistrement"><i
-                                            class="fa fa-pencil-square-o"></i></a>
-                                <a href="{{ route('admin_delete_registration_process',$registration->id) }}"
-                                   class="btn btn-danger btn-xs"
-                                   onclick="return confirm('Etes-vous sûr de vouloir supprimer cet enregistrement?');"
-                                   title="Supprimer cet enregristrement"><i class="fa fa-times"></i></a>
+                                @if($registration->validate == 0)
+                                <a href="{{ route('admin_validate_registration_process',$registration->id) }}" class="btn btn-default btn-sm"
+                                   title="Valider l'enregistrement"><i
+                                            class="fa fa-check"></i></a>
+                                <a href="{{ route('admin_refuse_registration_process',$registration->id) }}"
+                                   class="btn btn-default btn-sm"
+                                   title="Refuser cet enregristrement"><i class="fa fa-close"></i></a>
+                                @else
+                                    <a href="{{ route('admin_edit_registration',$registration->id) }}"
+                                       class="btn btn-default btn-sm"
+                                       title="Refuser cet enregristrement"><i class="fa fa-edit"></i></a>
+                                    <a href="{{ route('admin_delete_registration_process',$registration->id) }}" class="btn btn-danger btn-sm"
+                                       onclick="return confirm('Etes-vous sûr de vouloir supprimer cette inscription?');"
+                                       title="Supprimer cette inscription"><i class="fa fa-close"></i></a>
+                                @endif
                             </td>
                         </tr>
                     @endforeach
                 @else
-                    <p> Aucune inscription pour le moment</p>
                 @endif
                 </tbody>
             </table>
+                <div class="table-bottom">
+                    {{ $registrations->appends(\Illuminate\Support\Facades\Input::except('page'))->links() }}
+                </div>
                 </div>
             <a href="{{route('admin_add_registration')}}">
             <button type="submit" class="btn btn-primary">
