@@ -65,6 +65,7 @@ class FrontController extends Controller
 
         if (Hash::check($password, $user->password)) {
             Auth::login($user);
+
             return Redirect::route('admin_home');
         } else {
             return back()->withInput()->with('flash_error', 'Mot de passe incorrect.');
