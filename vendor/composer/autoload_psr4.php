@@ -33,6 +33,7 @@ return array(
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'League\\Flysystem\\' => array($vendorDir . '/league/flysystem/src'),
     'Laravel\\' => array($vendorDir . '/anahkiasen/former/src/Laravel'),
+    'Jenssegers\\Date\\' => array($vendorDir . '/jenssegers/date/src'),
     'Illuminate\\' => array($vendorDir . '/laravel/framework/src/Illuminate'),
     'HtmlObject\\' => array($vendorDir . '/anahkiasen/html-object/src'),
     'Former\\' => array($vendorDir . '/anahkiasen/former/src/Former', $vendorDir . '/anahkiasen/former/tests'),

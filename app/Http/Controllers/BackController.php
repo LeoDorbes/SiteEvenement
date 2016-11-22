@@ -55,6 +55,14 @@ class BackController extends Controller
         return view('back/registrations')->with('registrations', $registrations);
     }
 
+    public function registration($id)
+    {
+
+        $registration = Registration::find($id);
+        if (!$registration) \App::abort(404);
+        return view('back/registration')->with('registration', $registration);
+    }
+
     public function validatedRegistrations()
     {
 

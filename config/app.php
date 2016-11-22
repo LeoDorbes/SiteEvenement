@@ -183,6 +183,7 @@ return [
          * Added by Léo & Nico
          */
         Former\FormerServiceProvider::class,
+        'Jenssegers\Date\DateServiceProvider',
 
 
     ],
@@ -238,6 +239,7 @@ return [
          * Added by Léo & Nico
          */
         'Former' => 'Former\Facades\Former',
+        'Date' => Jenssegers\Date\Date::class,
 
 
     ],

@@ -29,6 +29,7 @@ Route::get('admin', ['as' => 'login', 'uses' => 'FrontController@login']);
 Route::get('admin/index', ['as' => 'admin_home', 'uses' => 'BackController@index']);
 
 Route::get('admin/index/inscriptions', ['as' => 'admin_registrations', 'uses' => 'BackController@registrations']);
+Route::get('admin/index/inscription/{id}', ['as' => 'admin_registration', 'uses' => 'BackController@registration']);
 Route::get('admin/index/inscriptions-validees', ['as' => 'admin_validated_registrations', 'uses' => 'BackController@validatedRegistrations']);
 Route::get('admin/index/inscriptions-refusees', ['as' => 'admin_refused_registrations', 'uses' => 'BackController@refusedRegistrations']);
 Route::get('admin/validate/inscription/{id}/process',['as' => 'admin_validate_registration_process', 'uses' => 'BackController@validateRegistration']);
