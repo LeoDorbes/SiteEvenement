@@ -44,26 +44,31 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        //dd($request->headers->all());
-        if ($request->wantsJson() ) {
-            return response()->json(
+        if (!(strpos($request->getContentType(),'json') === false)) {
 
-                $this->getJsonMessage($exception),
+
+            $errorMessage = false;
+            if($this->getExceptionHTTPStatusCode($exception) == '404')$errorMessage = '404 Not Found';
+            else if($this->getExceptionHTTPStatusCode($exception) == '403')$errorMessage = '403 Forbidden';
+            
+            return response()->json(
+                $this->getJsonMessage($exception,$errorMessage),
                 $this->getExceptionHTTPStatusCode($exception)
+
             );
         }
         return parent::render($request, $exception);
     }
 
-    protected function getJsonMessage($e){
+    protected function getJsonMessage(Exception $e,$errorMessage){
         // You may add in the code, but it's duplication
         return [
-            'status' => 'false',
-            'message' => $e->getMessage()
+            'status' => 'error',
+            'message' => $e->getMessage() ? $e->getMessage() : $errorMessage
         ];
     }
 
-    protected function getExceptionHTTPStatusCode($e){
+    protected function getExceptionHTTPStatusCode(Exception $e){
         // Not all Exceptions have a http status code
         // We will give Error 500 if none found
         return method_exists($e, 'getStatusCode') ?
