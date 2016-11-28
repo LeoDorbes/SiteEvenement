@@ -44,13 +44,13 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        if (!(strpos($request->getContentType(),'json') === false)) {
 
+        if (!$request->acceptsHtml()) {
 
             $errorMessage = false;
             if($this->getExceptionHTTPStatusCode($exception) == '404')$errorMessage = '404 Not Found';
             else if($this->getExceptionHTTPStatusCode($exception) == '403')$errorMessage = '403 Forbidden';
-            
+
             return response()->json(
                 $this->getJsonMessage($exception,$errorMessage),
                 $this->getExceptionHTTPStatusCode($exception)

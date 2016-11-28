@@ -8,11 +8,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 
-class FrontController extends Controller
+class ApiController extends Controller
 {
 
         public function registration(){
-
 
             $registration = Registration::find(0);
 
