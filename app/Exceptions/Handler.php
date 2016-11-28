@@ -44,8 +44,32 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        //dd($request->headers->all());
+        if ($request->wantsJson() ) {
+            return response()->json(
+
+                $this->getJsonMessage($exception),
+                $this->getExceptionHTTPStatusCode($exception)
+            );
+        }
         return parent::render($request, $exception);
     }
+
+    protected function getJsonMessage($e){
+        // You may add in the code, but it's duplication
+        return [
+            'status' => 'false',
+            'message' => $e->getMessage()
+        ];
+    }
+
+    protected function getExceptionHTTPStatusCode($e){
+        // Not all Exceptions have a http status code
+        // We will give Error 500 if none found
+        return method_exists($e, 'getStatusCode') ?
+            $e->getStatusCode() : 500;
+    }
+
 
     /**
      * Convert an authentication exception into an unauthenticated response.
