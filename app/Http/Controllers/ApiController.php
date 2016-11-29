@@ -3,25 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Registration;
-use App\User;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
-use Illuminate\Validation\Validator;
+use Validator;
+
 
 class ApiController extends Controller
 {
-
-    public function registration()
-    {
-
-        $registration = Registration::find(0);
-
-        return response()->json($registration, 201);
-    }
-
 
     /**
      * Display a listing of the resource.
@@ -38,10 +26,21 @@ class ApiController extends Controller
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
+     *
+     * NOT NECESSARY FOR NOW :
      */
     public function create()
     {
-        return null;
+        //We get the ruleset from here, so we don't have to write it twice :
+        $registrationRequest = new \App\Http\Requests\Registration();
+        $registrationRequestRules = $registrationRequest->rules();
+
+
+        foreach (array_keys($registrationRequestRules) as $field) {
+           $successArray[] = $field;
+        }
+
+        return Response::json($successArray, 200);
     }
 
     /**
@@ -52,18 +51,26 @@ class ApiController extends Controller
      */
     public function store(Request $request)
     {
-
-
-        /*
-         * Old Laravel Validator : Allow a more precise control over the response, we use the ruleset of the Registration request by creating a local instance of it.
-         */
+        //We get the ruleset from here, so we don't have to write it twice :
         $registrationRequest = new \App\Http\Requests\Registration();
-        $v = \Illuminate\Support\Facades\Validator::make($request->input(), $registrationRequest->rules());
+        $registrationRequestRules = $registrationRequest->rules();
+        $validator = Validator::make($request->all(), $registrationRequestRules);
 
-        if ($v->passes()) {
+        if ($validator->fails()) {
+            $errorArray = [
+                'status' => "error",
+                'message' => "400 Bad Request"
+            ];
+            foreach (array_keys($registrationRequestRules) as $field) {
 
-        } else {
-            dd('erreur ici');
+                $array = array();
+                foreach ($validator->errors()->get($field) as $problem) {
+                    $array[] = $problem;
+                }
+                if (count($array) > 0) $errorArray[$field] = $array;
+            }
+
+            return Response::json($errorArray, 400);
         }
 
         //Cannot use the Registration request, has to handle errors manually.
@@ -77,12 +84,13 @@ class ApiController extends Controller
         $registration->position = $request->input('position');
         $registration->comment = $request->input('comment');
 
-        //dd($registration);
+        $registration->save();
 
         return Response::json([
             'status' => "success",
             'message' => "201 Created"
         ], 201);
+
     }
 
     /**
@@ -100,6 +108,7 @@ class ApiController extends Controller
     }
 
     /**
+     * NOT NECESSARY FOR NOW :
      * Show the form for editing the specified resource.
      *
      * @param  int $id
@@ -107,7 +116,16 @@ class ApiController extends Controller
      */
     public function edit($id)
     {
-        return null;
+        //We get the ruleset from here, so we don't have to write it twice :
+        $registrationRequest = new \App\Http\Requests\Registration();
+        $registrationRequestRules = $registrationRequest->rules();
+
+
+        foreach (array_keys($registrationRequestRules) as $field) {
+            $successArray[] = $field;
+        }
+
+        return Response::json($successArray, 200);
     }
 
     /**
@@ -119,7 +137,48 @@ class ApiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return null;
+        $registration = Registration::find($id);
+        if(!$registration)\App::abort(404);
+
+        //We get the ruleset from here, so we don't have to write it twice :
+        $registrationRequest = new \App\Http\Requests\Registration();
+        $registrationRequestRules = $registrationRequest->rules();
+        $validator = Validator::make($request->all(), $registrationRequestRules);
+
+        if ($validator->fails()) {
+            $errorArray = [
+                'status' => "error",
+                'message' => "400 Bad Request"
+            ];
+            foreach (array_keys($registrationRequestRules) as $field) {
+
+                $array = array();
+                foreach ($validator->errors()->get($field) as $problem) {
+                    $array[] = $problem;
+                }
+                if (count($array) > 0) $errorArray[$field] = $array;
+            }
+
+            return Response::json($errorArray, 400);
+        }
+
+        //Cannot use the Registration request, has to handle errors manually.
+        $registration->first_name = $request->input('first_name');
+        $registration->last_name = $request->input('last_name');
+        $registration->email = $request->input('email');
+        $registration->address = $request->input('address');
+        $registration->city = $request->input('city');
+        $registration->postal_code = $request->input('postal_code');
+        $registration->position = $request->input('position');
+        $registration->comment = $request->input('comment');
+
+        $registration->save();
+
+        return Response::json([
+            'status' => "success",
+            'message' => "200 OK - Updated"
+        ], 200);
+
     }
 
     /**
@@ -130,6 +189,13 @@ class ApiController extends Controller
      */
     public function destroy($id)
     {
-        return null;
+        $registration = Registration::find($id);
+        if (!$registration) \Abort(404);
+
+        $registration->delete();
+        return Response::json([
+            'status' => "success",
+            'message' => "200 OK - Deleted"
+        ], 200);
     }
 }

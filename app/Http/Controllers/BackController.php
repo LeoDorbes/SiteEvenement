@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\Login;
 use App\Registration;
 use App\User;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 
 class BackController extends Controller
@@ -114,9 +111,8 @@ class BackController extends Controller
         return view('back/registration_form')->with('url', $url)->with('registration', $registration);
     }
 
-    public function  editRegistrationProcess(\App\Http\Requests\Registration $request, $id)
+    public function  editRegistrationProcess(Request $request, $id)
     {
-
         $registration = Registration::find($id);
         if (!$registration) \App::abort(404);
 
@@ -144,7 +140,6 @@ class BackController extends Controller
 
     public function addRegistrationProcess(\App\Http\Requests\Registration $request)
     {
-
         $registration = new Registration();
         $registration->first_name = $request->input('first_name');
         $registration->last_name = $request->input('last_name');

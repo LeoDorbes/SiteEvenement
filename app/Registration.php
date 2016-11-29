@@ -23,7 +23,13 @@ class Registration extends Model
 
     ];
 
+    public static function boot()
+    {
+        User::creating(function ($registration) {
+            $registration->validate = 0;
+        });
 
+    }
 
 
 }

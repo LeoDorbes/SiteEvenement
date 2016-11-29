@@ -4,7 +4,8 @@
 
 
     <div class="container">
-    
+
+        <h1> Panneau de gestion principal </h1>
     </div>
 
 
