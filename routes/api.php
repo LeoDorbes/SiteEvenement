@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,11 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:api');
 */
 
-Route::get('registration', ['as' => 'api_registration', 'uses' => 'ApiController@registration']);
+
+Route::get('/registrations', ['as' => 'registration_index', 'uses' => 'ApiController@index']);
+Route::get('/registration/create', ['as' => 'registration_create', 'uses' => 'ApiController@create']);
+Route::post('/registration', ['as' => 'registration_store', 'uses' => 'ApiController@store']);
+Route::get('/registration/{id}', ['as' => 'registration_show', 'uses' => 'ApiController@show']);
+Route::get('/registration/{id}/edit', ['as' => 'registration_edit', 'uses' => 'ApiController@edit']);
+Route::put('/registration/{id}', ['as' => 'registration_update', 'uses' => 'ApiController@update']);
+Route::delete('/registration/{id}', ['as' => 'registration_destroy', 'uses' => 'ApiController@destroy']);
