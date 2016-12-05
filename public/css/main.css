@@ -304,6 +304,7 @@ figure {
 figure .img-wrapper {
   position: relative;
   overflow: hidden;
+  height: 300px;
 }
 figure img {
   -webkit-transform: scale3d(1, 1, 1);
@@ -1103,7 +1104,9 @@ body{
 }
 
 /* index */
-
+#col-image-front{
+  padding-top: 80px;
+}
 
 
 

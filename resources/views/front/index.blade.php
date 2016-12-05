@@ -82,9 +82,10 @@
                         </div>
 
                     </div>
-                    <div class="col-md-6 col-sm-6">
+                    <div class="col-md-6 col-sm-6" id="col-image-front">
                         <div class="block wow fadeInRight" data-wow-delay=".3s" data-wow-duration="500ms">
-                            <img src="images/about/about.jpg" alt="">
+                           <!-- <img src="images/about/about.jpg" alt="">-->
+                             <img src="images/ces-computer.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -114,7 +115,7 @@
                                 <div class="overlay">
                                     <div class="buttons">
                                         <a rel="gallery" href="images/portfolio/item-1.jpg">Orange</a>
-                                        <a target="_blank" href="single-portfolio.html"></a>
+                                        <a target="_blank" href="single-portfolio.html"> Detail </a>
                                     </div>
                                 </div>
                             </div>
@@ -134,11 +135,11 @@
                     <div class="col-sm-4 col-xs-12">
                         <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
                             <div class="img-wrapper">
-                                <img src="images/portfolio/item-2.jpg" class="img-responsive" alt="this is a title">
+                                <img src="images/laravel-logo.png" class="img-responsive" alt="this is a title">
 
                                 <div class="overlay">
                                     <div class="buttons">
-                                        <a rel="gallery" class="fancybox" href="images/portfolio/item-2.jpg">Demo</a>
+                                        <a rel="gallery" class="fancybox" href="images/portfolio/item-2.jpg">Laravel</a>
                                         <a target="_blank" href="single-portfolio.html">Details</a>
                                     </div>
                                 </div>
@@ -146,12 +147,12 @@
                             <figcaption>
                                 <h4>
                                     <a href="#">
-                                        Bottle Mockup
+                                        Laravel
                                     </a>
                                 </h4>
 
                                 <p>
-                                    Lorem ipsum dolor sit.
+                                   Framework Utiliser durant nos épreuves depuis 2010
                                 </p>
                             </figcaption>
                         </figure>
@@ -159,11 +160,11 @@
                     <div class="col-sm-4 col-xs-12">
                         <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
                             <div class="img-wrapper">
-                                <img src="images/portfolio/item-3.jpg" class="img-responsive" alt="">
+                                <img src="images/github.jpeg" class="img-responsive" alt="">
 
                                 <div class="overlay">
                                     <div class="buttons">
-                                        <a rel="gallery" class="fancybox" href="images/portfolio/item-3.jpg">Demo</a>
+                                        <a rel="gallery" class="fancybox" href="images/portfolio/item-3.jpg">Github</a>
                                         <a target="_blank" href="single-portfolio.html">Details</a>
                                     </div>
                                 </div>
@@ -171,12 +172,13 @@
                             <figcaption>
                                 <h4>
                                     <a href="#">
-                                        Table Design
+                                        Github
                                     </a>
                                 </h4>
 
                                 <p>
-                                    Lorem ipsum dolor sit amet.
+                                    Github permet à notre concourt de s'impliqué et dans l'univers open source. Tous nos projets sont
+                                    posté sur Github
                                 </p>
                             </figcaption>
                         </figure>
@@ -184,7 +186,7 @@
                     <div class="col-sm-4 col-xs-12">
                         <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="600ms">
                             <div class="img-wrapper">
-                                <img src="images/portfolio/item-4.jpg" class="img-responsive" alt="">
+                                <img src="images/photoshop.jpg" class="img-responsive" alt="">
 
                                 <div class="overlay">
                                     <div class="buttons">
@@ -196,12 +198,13 @@
                             <figcaption>
                                 <h4>
                                     <a href="#">
-                                        Make Up elements
+                                       Photoshop
                                     </a>
                                 </h4>
 
                                 <p>
-                                    Lorem ipsum dolor.
+                                    Nos concourt de design utilisent photoshop depuis 2013. Photoshop dispose d'un stand
+                                    et organise des jeux concourts.
                                 </p>
                             </figcaption>
                         </figure>

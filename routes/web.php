@@ -14,6 +14,7 @@
 /*
  * Front Routes :
  */
+
 Route::get('/', ['as' => 'home', 'uses' => 'FrontController@index']);
 Route::get('inscription', ['as' => 'registration', 'uses' => 'FrontController@registration']);
 Route::post('inscription/process', ['as' => 'registration_process', 'uses' => 'FrontController@registrationProcess']);
