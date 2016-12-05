@@ -115,7 +115,6 @@
                                 <div class="overlay">
                                     <div class="buttons">
                                         <a rel="gallery" href="images/portfolio/item-1.jpg">Orange</a>
-                                        <a target="_blank" href="single-portfolio.html"> Detail </a>
                                     </div>
                                 </div>
                             </div>
@@ -140,7 +139,6 @@
                                 <div class="overlay">
                                     <div class="buttons">
                                         <a rel="gallery" class="fancybox" href="images/portfolio/item-2.jpg">Laravel</a>
-                                        <a target="_blank" href="single-portfolio.html">Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -165,7 +163,6 @@
                                 <div class="overlay">
                                     <div class="buttons">
                                         <a rel="gallery" class="fancybox" href="images/portfolio/item-3.jpg">Github</a>
-                                        <a target="_blank" href="single-portfolio.html">Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -190,8 +187,7 @@
 
                                 <div class="overlay">
                                     <div class="buttons">
-                                        <a rel="gallery" class="fancybox" href="images/portfolio/item-4.jpg">Demo</a>
-                                        <a target="_blank" href="single-portfolio.html">Details</a>
+                                        <a rel="gallery" class="fancybox" href="images/portfolio/item-4.jpg">Photoshop</a>
                                     </div>
                                 </div>
                             </div>
@@ -212,24 +208,23 @@
                     <div class="col-sm-4 col-xs-12">
                         <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="900ms">
                             <div class="img-wrapper">
-                                <img src="images/portfolio/item-5.jpg" class="img-responsive" alt="">
+                                <img src="images/SourceTree.png" class="img-responsive" alt="">
 
                                 <div class="overlay">
                                     <div class="buttons">
-                                        <a rel="gallery" class="fancybox" href="images/portfolio/item-5.jpg">Demo</a>
-                                        <a target="_blank" href="single-portfolio.html">Details</a>
+                                        <a rel="gallery" class="fancybox" href="images/portfolio/item-5.jpg">SourceTree</a>
                                     </div>
                                 </div>
                             </div>
                             <figcaption>
                                 <h4>
                                     <a href="#">
-                                        Shoping Bag Concept
+                                       Source Tree
                                     </a>
                                 </h4>
 
                                 <p>
-                                    Lorem ipsum dolor.
+                                    SourceTree simplifies how you interact with your Git and Mercurial repositories so you can focus on coding. Visualize and manage your repositories through SourceTree's simple interface.
                                 </p>
                             </figcaption>
                         </figure>
@@ -237,24 +232,23 @@
                     <div class="col-sm-4 col-xs-12">
                         <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="1200ms">
                             <div class="img-wrapper">
-                                <img src="images/portfolio/item-6.jpg" class="img-responsive" alt="">
+                                <img src="images/docker.jpg" class="img-responsive" alt="">
 
                                 <div class="overlay">
                                     <div class="buttons">
-                                        <a rel="gallery" class="fancybox" href="images/portfolio/item-6.jpg">Demo</a>
-                                        <a target="_blank" href="single-portfolio.html">Details</a>
+                                        <a rel="gallery" class="fancybox" href="images/portfolio/item-6.jpg">Docker</a>
                                     </div>
                                 </div>
                             </div>
                             <figcaption>
                                 <h4>
                                     <a href="#">
-                                        Caramel Bottle
+                                        Docker
                                     </a>
                                 </h4>
 
                                 <p>
-                                    Lorem ipsum dolor.
+                                    Docker's commercial solutions provide an out of the box CaaS environment that gives IT Ops teams security and control over their environment, while enabling developers to build applications in a self service way. With a clear separation of concerns and robust tooling, organizations are able to innovate faster, reduce costs and ensure security.
                                 </p>
                             </figcaption>
                         </figure>
@@ -269,13 +263,13 @@
         <section id="feature">
             <div class="container">
                 <div class="section-heading">
-                    <h1 class="title wow fadeInDown" data-wow-delay=".3s">Offer From Me</h1>
+                    <h1 class="title wow fadeInDown" data-wow-delay=".3s">Un concours innovant </h1>
 
                     <p class="wow fadeInDown" data-wow-delay=".5s">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,<br> quasi dolores numquam dolor
-                        vero
-                        ex, tempora commodi repellendus quod laborum.
-                    </p>
+                        Tous nos challenge ont pour but principal de pousser la créativité, l'inventivité, l'innovation à son apogée,
+                        tout en prônant l'amusement et le divertissement <br />
+                        Votre esprit et votre cerveau serront poussé à leur meilleur niveau. <br />
+                        Que les meilleur gagnent !
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-lg-4 col-xs-12">
@@ -286,7 +280,7 @@
                                 </div>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Media heading</h4>
+                                <h4 class="media-heading">Avoir l'esprit scientifique </h4>
 
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
                             </div>
@@ -300,7 +294,7 @@
                                 </div>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Well documented.</h4>
+                                <h4 class="media-heading">Etre creatif</h4>
 
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
                             </div>
@@ -314,7 +308,7 @@
                                 </div>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Well documented.</h4>
+                                <h4 class="media-heading">Etre innovent</h4>
 
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
                             </div>
@@ -328,7 +322,7 @@
                                 </div>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Free updates</h4>
+                                <h4 class="media-heading">Avoir l'esprit de competition</h4>
 
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
                             </div>
@@ -342,7 +336,7 @@
                                 </div>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Solid Support</h4>
+                                <h4 class="media-heading">Avoir l'esprit d'equipe</h4>
 
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
                             </div>
@@ -356,7 +350,7 @@
                                 </div>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Simple Installation</h4>
+                                <h4 class="media-heading">Maitriser son environement</h4>
 
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
                             </div>
@@ -375,12 +369,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="block">
-                            <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">SO WHAT YOU
-                                THINK ?</h1>
-                                <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Lorem ipsum
-                                    dolor
-                                    sit amet, consectetur adipisicing elit. Nobis,<br>possimus commodi, fugiat magnam
-                                    temporibus vero magni recusandae? Dolore, maxime praesentium.</p>
+                            <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">Convaincu ? </h1>
+                                <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">
+                                    Rejoint nous maintenent, participer et peutétre gagner ! </p>
                                 <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown"
                                    data-wow-delay=".7s" data-wow-duration="500ms">Contact With Me</a>
                         </div>

@@ -357,14 +357,14 @@ figure .overlay:hover a {
   transform: scale3d(1, 1, 1);
 }
 figure .buttons {
-  position: absolute;
+  position: relative;
   top: 45%;
-  left: 24%;
 }
 figure figcaption {
   padding: 20px 25px;
   margin-top: 0;
   color: #666;
+  min-height: 160px;
 }
 figure figcaption h4 {
   margin: 0;
@@ -1118,7 +1118,10 @@ body{
   background: url('../images/background-form-subscribe3.jpg') no-repeat 50%;
   background-size: cover;
   background-attachment: fixed;
-  height: 750px;
+  height: 790px;
+}
+#participate{
+  position: relative !important;
 }
 .form .form-li{
   margin-bottom: 13px;
