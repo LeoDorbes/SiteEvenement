@@ -3,9 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Support\Facades\Hash;
+
 
 class Registration extends Model
 {
@@ -25,9 +23,23 @@ class Registration extends Model
 
     public static function boot()
     {
-        User::creating(function ($registration) {
+        Registration::creating(function ($registration) {
             $registration->validate = 0;
         });
     }
+
+    /*public function fillRegistration(\Illuminate\Http\Request $request){
+
+        $this->first_name = $request->input('first_name');
+        $this->last_name = $request->input('last_name');
+        $this->email = $request->input('email');
+        $this->address = $request->input('address');
+        $this->city = $request->input('city');
+        $this->postal_code = $request->input('postal_code');
+        $this->role_id = $request->input('role');
+        $this->gender = $request->input('gender');
+        $this->participate = $request->input('participate') ? true : false;
+        $this->comment = $request->input('comment');
+    }*/
 
 }

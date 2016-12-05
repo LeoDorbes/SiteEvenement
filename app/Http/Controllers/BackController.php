@@ -111,7 +111,7 @@ class BackController extends Controller
         return view('back/registration_form')->with('url', $url)->with('registration', $registration);
     }
 
-    public function  editRegistrationProcess(Request $request, $id)
+    public function  editRegistrationProcess(\App\Http\Requests\Registration $request, $id)
     {
         $registration = Registration::find($id);
         if (!$registration) \App::abort(404);
@@ -122,7 +122,9 @@ class BackController extends Controller
         $registration->address = $request->input('address');
         $registration->city = $request->input('city');
         $registration->postal_code = $request->input('postal_code');
-        $registration->position = $request->input('position');
+        $registration->role_id = $request->input('role');
+        $registration->gender = $request->input('gender');
+        $registration->participate = $request->input('participate') ? true : false;
         $registration->comment = $request->input('comment');
 
         $registration->save();
@@ -147,7 +149,9 @@ class BackController extends Controller
         $registration->address = $request->input('address');
         $registration->city = $request->input('city');
         $registration->postal_code = $request->input('postal_code');
-        $registration->position = $request->input('position');
+        $registration->role_id = $request->input('role');
+        $registration->gender = $request->input('gender');
+        $registration->participate = $request->input('participate') ? true : false;
         $registration->comment = $request->input('comment');
 
         //@todo : Gerer erreur BDD -- ajouter les erreur client / serveur

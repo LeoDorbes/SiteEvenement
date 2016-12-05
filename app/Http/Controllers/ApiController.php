@@ -81,7 +81,9 @@ class ApiController extends Controller
         $registration->address = $request->input('address');
         $registration->city = $request->input('city');
         $registration->postal_code = $request->input('postal_code');
-        $registration->position = $request->input('position');
+        $registration->role_id = $request->input('role');
+        $registration->gender = $request->input('gender');
+        $registration->participate = $request->input('participate') ? true : false;
         $registration->comment = $request->input('comment');
 
         $registration->save();

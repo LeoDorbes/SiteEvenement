@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Request;
 
 class FrontController extends Controller
 {
@@ -19,9 +20,6 @@ class FrontController extends Controller
 
     public function index()
     {
-
-
-
         return view('front/index');
     }
 
@@ -34,18 +32,25 @@ class FrontController extends Controller
     public function registrationProcess(\App\Http\Requests\Registration $request)
     {
         $registration = new Registration();
-        $registration->first_name = $request->input('first_name');
-        $registration->last_name = $request->input('last_name');
-        $registration->email = $request->input('email');
-        $registration->address = $request->input('address');
-        $registration->city = $request->input('city');
-        $registration->postal_code = $request->input('postal_code');
-        $registration->position = $request->input('position');
-        $registration->comment = $request->input('comment');
+        dd($request);
+
+        //$registration->fillRegistration($request);
+        $this->first_name = $request->input('first_name');
+        $this->last_name = $request->input('last_name');
+        $this->email = $request->input('email');
+        $this->address = $request->input('address');
+        $this->city = $request->input('city');
+        $this->postal_code = $request->input('postal_code');
+        $this->role_id = $request->input('role');
+        $this->gender = $request->input('gender');
+        $this->participate = $request->input('participate') ? true : false;
+        $this->comment = $request->input('comment');
+
 
         //@todo : Gerer erreur BDD -- ajouter les erreur client / serveur
         $registration->save();
-        return view('front/registration')->with('flash_success' , 'Votre inscription à bien ete validée. Merci :) ');
+        return Redirect::route('home')->with('flash_success' , 'Votre inscription à bien ete validée. Merci :) ');
+
     }
 
     public function login()
