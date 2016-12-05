@@ -32,7 +32,7 @@ class FrontController extends Controller
     public function registrationProcess(\App\Http\Requests\Registration $request)
     {
         $registration = new Registration();
-        dd($request);
+        //dd($request);
 
         //$registration->fillRegistration($request);
         $this->first_name = $request->input('first_name');
@@ -46,10 +46,9 @@ class FrontController extends Controller
         $this->participate = $request->input('participate') ? true : false;
         $this->comment = $request->input('comment');
 
-
         //@todo : Gerer erreur BDD -- ajouter les erreur client / serveur
         $registration->save();
-        return Redirect::route('home')->with('flash_success' , 'Votre inscription à bien ete validée. Merci :) ');
+        return Redirect::route('home')->with('flash_success', 'Votre inscription à bien ete validée. Merci :) ');
 
     }
 

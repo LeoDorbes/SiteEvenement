@@ -25,7 +25,6 @@ class Registration extends FormRequest
      */
     public function rules()
     {
-
         $rules['first_name'] =  'required|max:50|min:2';
         $rules['last_name'] =  'required|max:50|min:2';
         $rules['address'] =  'required|max:150|min:2';
