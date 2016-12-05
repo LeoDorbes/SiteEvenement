@@ -7,12 +7,10 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Hash;
 
-class Registration extends Model
+class Role extends Model
 {
-    protected $table = "registrations";
+    protected $table = "roles";
     protected $primaryKey = "id";
-
-    //Validation : 0 = pending, 1 = accepted, 2 = refused
 
     /**
      * The attributes that are mass assignable.
@@ -23,11 +21,18 @@ class Registration extends Model
 
     ];
 
-    public static function boot()
+    public static function getFormList()
     {
-        User::creating(function ($registration) {
-            $registration->validate = 0;
-        });
+        $tab = [];
+        $roles = Role::all();
+        //$tab[null]= '';
+        if (count($roles) > 0) {
+            foreach ($roles as $role) {
+                $tab[$role->id] = $role->name;
+            }
+        }
+        return $tab;
+
     }
 
 }
