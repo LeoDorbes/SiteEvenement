@@ -29,7 +29,7 @@ class Registration extends Model
         });
     }
 
-    /*public function fillRegistration(\Illuminate\Http\Request $request){
+    public function fillRegistration(\Illuminate\Http\Request $request){
 
         $this->first_name = $request->input('first_name');
         $this->last_name = $request->input('last_name');
@@ -41,6 +41,6 @@ class Registration extends Model
         $this->gender = $request->input('gender');
         $this->participate = $request->input('participate') ? true : false;
         $this->comment = $request->input('comment');
-    }*/
+    }
 
 }
