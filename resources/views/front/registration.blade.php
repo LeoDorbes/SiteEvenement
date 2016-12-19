@@ -39,22 +39,23 @@
                 <?= Former::text('address')->label(false)->placeholder('Adresse')->required()->class('form-control form-li') ?>
                 <?= Former::text('city')->label(false)->placeholder('Ville')->required()->class('form-control form-li') ?>
                 <?= Former::text('postal_code')->label(false)->placeholder('Code Postal')->required()->class('form-control form-li') ?>
-                <?= Former::select('role')->options(App\Role::getFormList())->class('form-control form-li')->required() ?>
+                <?= Former::select('role')->label("Rôle :")->options(App\Role::getFormList())->class('form-control form-li')->required() ?>
 
-                <div class="form-group">
-                    <div class="checkbox">
-                        <label for="participate" class="">Pourras participer à l'evenement à Paris
-                            <input class="form-control form-li" id="participate" type="checkbox" name="participate"
+                {{--<div class="form-group">--}}
+                    {{--<div class="checkbox">--}}
+
+                        <label for="participate" class="">Pourra participer à l'événement à Paris</label>
+                            <input class="" id="participate" type="checkbox" name="participate"
                                    value="1">
-                        </label>
-                    </div>
-                </div>
+
+                    {{--</div>--}}
+                {{--</div>--}}
 
                 <?= Former::textarea('comment')->label(false)->placeholder('Commentaire')->required()->class('form-control form-li') ?>
 
 
-                <button type="submit" class="btn btn-primary">
-                    <i class="fa fa-btn fa-user"></i> s'inscrire
+                <button type="submit" class="btn btn-primary" id="subscribe-button">
+                    <i class="fa fa-btn fa-user fa-2x"></i> s'inscrire
                 </button>
                 <?= Former::close() ?>
             </div>

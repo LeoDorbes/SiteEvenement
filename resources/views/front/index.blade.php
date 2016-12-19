@@ -58,33 +58,31 @@ Slider Section Start
     <section id="about">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-6">
+                <div class="col-md-6 col-sm-12">
                     <div class="block wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="500ms">
                         <h2> A Propos
                         </h2>
 
                         <p>
-                            Fondé en 2008 par Thomas Terriel et Mélanie Cotine, le concours Web-Challenge a su federer
-                            depuis lors de nombreux developpeurs débutants et étudiants du monde du Web.
+                            Fondé en 2008 par Thomas Terriel et Mélanie Cotine, le concours Web-Challenge a su fédérer
+                            depuis lors de nombreux développeurs débutants et étudiants du monde du Web.
 
-                            L'evenement consiste d'abbord en une phase de selection/developpement en ligne,
-                            puis une grande finale directement à Paris, dans le 14ème arrondissement.
-                            5 gagnants ressortent alors avec une invitation dans les plus grands incubateurs Francais
+                            L'événement consiste d'abord en une phase de sélection/développement en ligne,
+                            puis une grande finale directement à Paris, dans le XIVe arrondissement.
+                            5 gagnants ressortiront alors avec une invitation dans les plus grands incubateurs français
                             pour continuer leur projet.
 
                         </p>
 
                         <p>
-                            La dernière edition à su attirer plus de 1200 participants, 234 projets dont 15 ayant étés
-                            selectionnés
-                            pour participer à la grande finale à Paris. Cette dernière a eu lieu le 23 Mars et aura été
-                            une formidable
-                            experience pour nos candidats ainsi que nos partenaires.
+                            La dernière édition a su attirer plus de 1200 participants, 234 projets dont 15 ayant été
+                            sélectionnés pour participer à la grande finale à Paris. Cette dernière a eu lieu le 23 mars
+                            et aura été une formidable expérience pour nos candidats ainsi que nos partenaires.
                         </p>
                     </div>
 
                 </div>
-                <div class="col-md-6 col-sm-6" id="col-image-front">
+                <div class="col-md-6 col-sm-12" id="col-image-front">
                     <div class="block wow fadeInRight" data-wow-delay=".3s" data-wow-duration="500ms">
                         <!-- <img src="images/about/about.jpg" alt="">-->
                         <img src="images/ces-computer.jpg" alt="">
@@ -102,13 +100,13 @@ Slider Section Start
             <div class="section-heading">
                 <h1 class="title wow fadeInDown" data-wow-delay=".3s">Nos partenaires</h1>
 
-                <p class="wow fadeInDown" data-wow-delay=".5s">
+                <p class="wow fadeInDown title-text" data-wow-delay=".5s">
 
                     La liste de nos partenaires pour l'édition 2017
                 </p>
             </div>
             <div class="row">
-                <div class="col-sm-4 col-xs-12">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                     <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms"
                             data-wow-delay="0ms">
                         <div class="img-wrapper">
@@ -128,12 +126,13 @@ Slider Section Start
                             </h4>
 
                             <p>
-                                Premier opérateur en France, Orange est notre partenaire depuis plus de 4 ans.
+                                Premier opérateur en France, Orange est le leader français des télécommunications.</br>
+                                Partenaire depuis 2009.
                             </p>
                         </figcaption>
                     </figure>
                 </div>
-                <div class="col-sm-4 col-xs-12">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                     <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
                         <div class="img-wrapper">
                             <img src="images/portfolio/item-2.png" class="img-responsive" alt="this is a title">
@@ -152,13 +151,13 @@ Slider Section Start
                             </h4>
 
                             <p>
-                                Premier framework web aux USA, Laravel offre une solution rapide et élégante à beaucoup de problématiques du web aujourd'hui.
+                                Premier framework web aux USA, Laravel offre une solution rapide et élégante à beaucoup de problématiques du web aujourd'hui.</br>
                                 Partenaire depuis 2013.
                             </p>
                         </figcaption>
                     </figure>
                 </div>
-                <div class="col-sm-4 col-xs-12">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                     <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
                         <div class="img-wrapper">
                             <img src="images/portfolio/item-3.jpg" class="img-responsive" alt="">
@@ -177,13 +176,13 @@ Slider Section Start
                             </h4>
 
                             <p>
-                                Github est la pour rendre notre concour open-source et accessibles à tous.
-                                Partenaire depuis 2011.
+                                Github est là pour rendre notre concours open-source et accessible à tous.</br>
+                                Partenaire depuis 2010.
                             </p>
                         </figcaption>
                     </figure>
                 </div>
-                <div class="col-sm-4 col-xs-12">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                     <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="600ms">
                         <div class="img-wrapper">
                             <img src="images/portfolio/item-4.jpg" class="img-responsive" alt="">
@@ -202,13 +201,13 @@ Slider Section Start
                             </h4>
 
                             <p>
-                                Le web-design, ca ne s'invente pas. Photoshop reste le logiciel que nous privilégions pour réaliser la maquette de votre site.
+                                Le web-design, ça ne s'invente pas. Photoshop reste le logiciel que nous privilégeons pour réaliser la maquette de votre site.</br>
                                 Partenaire depuis 2011.
                             </p>
                         </figcaption>
                     </figure>
                 </div>
-                <div class="col-sm-4 col-xs-12">
+                <div class="col-lg-4 col-md-6 col-sm-6  col-xs-12">
                     <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="900ms">
                         <div class="img-wrapper">
                             <img src="images/portfolio/item-5.png" class="img-responsive" alt="">
@@ -227,14 +226,14 @@ Slider Section Start
                             </h4>
 
                             <p>
-                                SourceTree simplifies how you interact with your Git and Mercurial repositories so you
-                                can focus on coding. Visualize and manage your repositories through SourceTree's simple
-                                interface.
+                                SourceTree est l'interface graphique que nous recommandons pour gérer votre répertoire Git ou Mercurial.
+                                Concentrez-vous sur l'essentiel : le code.</br>
+                                Partenaire depuis 2013.
                             </p>
                         </figcaption>
                     </figure>
                 </div>
-                <div class="col-sm-4 col-xs-12">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                     <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="1200ms">
                         <div class="img-wrapper">
                             <img src="images/portfolio/item-6.jpg" class="img-responsive" alt="">
@@ -253,10 +252,10 @@ Slider Section Start
                             </h4>
 
                             <p>
-                                Docker's commercial solutions provide an out of the box CaaS environment that gives IT
-                                Ops teams security and control over their environment, while enabling developers to
-                                build applications in a self service way. With a clear separation of concerns and robust
-                                tooling, organizations are able to innovate faster, reduce costs and ensure security.
+                                Docker est LA solution qui vous permettra de
+                                garantir la portabilité et la sécurité de vos projets, où que vous deviez les déployer.</br>
+                                Partenaire depuis 2015.
+
                             </p>
                         </figcaption>
                     </figure>
@@ -273,12 +272,10 @@ Slider Section Start
             <div class="section-heading">
                 <h1 class="title wow fadeInDown" data-wow-delay=".3s">Un concours innovant </h1>
 
-                <p class="wow fadeInDown" data-wow-delay=".5s">
-                    Tous nos challenge ont pour but principal de pousser la créativité, l'inventivité, l'innovation à
-                    son apogée,
-                    tout en prônant l'amusement et le divertissement <br/>
-                    Votre esprit et votre cerveau serront poussé à leur meilleur niveau. <br/>
-                    Que les meilleur gagnent !
+                <p class="wow fadeInDown title-text" data-wow-delay=".5s">
+                    Notre concours vise à stimuler votre créativité
+                    tout en vous divertissant de façon originale. <br/>
+                    Alors, à vos cerveaux et que les meilleurs gagnent !
             </div>
             <div class="row">
                 <div class="col-md-4 col-lg-4 col-xs-12">
@@ -381,10 +378,10 @@ Slider Section Start
                         <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">Alors,
                             convaincu?</h1>
                             <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">
-                                N'hésite plus, participe et tente ta chance. Tu seras peut être le prochain gagnant!
+                                N'hésite plus, participe et tente ta chance. Tu seras peut-être le prochain gagnant!
                             </p>
                             <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown"
-                               data-wow-delay=".7s" data-wow-duration="500ms">Contact With Me</a>
+                               data-wow-delay=".7s" data-wow-duration="500ms">Contactez-nous</a>
                     </div>
                 </div>
 

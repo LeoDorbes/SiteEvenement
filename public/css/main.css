@@ -1330,7 +1330,23 @@ body {
     padding-top: 80px;
 }
 
+p{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.title-text{
+    text-align: center;
+    text-justify: inter-word;
+}
+
+
+
 /* subscribtion */
+
+#subscribe-button{
+    font-size: 135%;
+}
 
 .subscription-form {
     padding-top: 7%;

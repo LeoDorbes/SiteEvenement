@@ -35,11 +35,9 @@ class ApiController extends Controller
         $registrationRequest = new \App\Http\Requests\Registration();
         $registrationRequestRules = $registrationRequest->rules();
 
-
         foreach (array_keys($registrationRequestRules) as $field) {
            $successArray[] = $field;
         }
-
         return Response::json($successArray, 200);
     }
 

@@ -30,7 +30,9 @@ class Registration extends FormRequest
         $rules['address'] =  'required|max:150|min:2';
         $rules['city'] =  'required|max:75|min:2';
         $rules['postal_code'] =  'required|max:25|min:2';
-        $rules['gender'] =  'integer';
+        $rules['gender'] =  'integer|required';
+        $rules['participate'] =  'integer|required';
+        $rules['role_id'] =  'integer|required';
         $rules['comment'] =  'min:1|max:1000';
 
         if(Route::input('id') == null){

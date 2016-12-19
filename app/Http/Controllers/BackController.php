@@ -116,6 +116,7 @@ class BackController extends Controller
         $registration = Registration::find($id);
         if (!$registration) \App::abort(404);
 
+        $registration->fillRegistration($request);
         $registration->first_name = $request->input('first_name');
         $registration->last_name = $request->input('last_name');
         $registration->email = $request->input('email');

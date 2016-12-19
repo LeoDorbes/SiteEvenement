@@ -28,19 +28,47 @@
                             {!! Former::populateField('postal_code', $registration->postal_code) !!}
                             {!! Former::populateField('position', $registration->position) !!}
                             {!! Former::populateField('comment', $registration->comment) !!}
+                            {!! Former::populateField('gender', $registration->gender) !!}
+
 
                         @else
 
                         @endif
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-3">
+                                <div class="form-group">
+                                    Civilité :
+                                    <label for="gender" class="">
+                                        <input id="gender" type="radio" name="gender" value="1">M
+                                    </label>
+                                    <label for="gender2" class="">
+                                        <input id="gender2" type="radio" name="gender" value="2">Mme
+                                    </label>
+                                    <label for="gender3" class="">
+                                        <input id="gender3" type="radio" name="gender" value="3">Mlle
+                                    </label>
+                                    <label for="gender4" class="">
+                                        <input id="gender4" type="radio" name="gender" value="4">Autre
+                                    </label>
+                                </div>
+
                                 {!! Former::text('first_name')->label('Prénom') !!}
                                 {!! Former::text('last_name')->label('Nom') !!}
                                 {!! Former::text('email')->label('E-mail') !!}
                                 {!! Former::text('address')->label('Adresse') !!}
                                 {!! Former::text('city')->label('Ville') !!}
                                 {!! Former::text('postal_code')->label('Code postal') !!}
-                                {!! Former::text('position')->label('Fonction') !!}
+                                {!! Former::select('role')->options(App\Role::getFormList())->class('form-control form-li')->required() !!}
+
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label for="participate" class="">Pourras participer à l'evenement à Paris
+                                            <input class="form-control form-li" id="participate" type="checkbox" name="participate"
+                                                   value="1">
+                                        </label>
+                                    </div>
+                                </div>
+
                                 {!! Former::textarea('comment')->label('Commentaire') !!}
 
                             </div>
