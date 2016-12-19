@@ -55,7 +55,7 @@
 
 
                 <button type="submit" class="btn btn-primary" id="subscribe-button">
-                    <i class="fa fa-btn fa-user fa-2x"></i> s'inscrire
+                    <i class="fa fa-btn fa-user"></i> s'inscrire
                 </button>
                 <?= Former::close() ?>
             </div>
