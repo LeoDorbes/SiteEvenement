@@ -100,7 +100,7 @@ Slider Section Start
             <div class="section-heading">
                 <h1 class="title wow fadeInDown" data-wow-delay=".3s">Nos partenaires</h1>
 
-                <p class="wow fadeInDown title-text" data-wow-delay=".5s">
+                <p class="wow fadeInDown centered-text" data-wow-delay=".5s">
 
                     La liste de nos partenaires pour l'édition 2017
                 </p>
@@ -272,7 +272,7 @@ Slider Section Start
             <div class="section-heading">
                 <h1 class="title wow fadeInDown" data-wow-delay=".3s">Un concours innovant </h1>
 
-                <p class="wow fadeInDown title-text" data-wow-delay=".5s">
+                <p class="wow fadeInDown centered-text" data-wow-delay=".5s">
                     Notre concours vise à stimuler votre créativité
                     tout en vous divertissant de façon originale. <br/>
                     Alors, à vos cerveaux et que les meilleurs gagnent !
@@ -377,8 +377,8 @@ Slider Section Start
                     <div class="block">
                         <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">Alors,
                             convaincu?</h1>
-                            <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">
-                                N'hésite plus, participe et tente ta chance. Tu seras peut-être le prochain gagnant!
+                            <p class="wow fadeInDown centered-text" data-wow-delay=".5s" data-wow-duration="500ms">
+                                N'hésitez plus, participez et tentez votre chance. Vous serez peut-être le prochain gagnant!
                             </p>
                             <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown"
                                data-wow-delay=".7s" data-wow-duration="500ms">Contactez-nous</a>
