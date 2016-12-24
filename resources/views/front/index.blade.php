@@ -3,7 +3,7 @@
 @section('content')
 
 
-
+    <?php $first = true ?>
 
     <!--
 ==================================================
@@ -28,17 +28,25 @@ Slider Section Start
                                 <h1 class="wow fadeInUp animated cd-headline slide" data-wow-delay=".4s">
                                     <span>Concours Web-Challenge, vous êtes un :</span><br>
                                     <span class="cd-words-wrapper">
-                                    <b class="is-visible">Intégrateur</b>
-                                    <b>Développeur</b>
-                                    <b>Graphiste</b>
-                                        <b>Chef de projet Web</b>
+
+
+                                    @foreach($roles as $role)
+                                       @if($first)
+                                            <b class="is-visible">
+                                           @else
+                                                    <b>
+                                           @endif
+                                       {{ $role }}</b>
+
+                                               <?php $first = false ?>
+                                        @endforeach
                                 </span>
                                 </h1>
                             </section>
                             <!-- cd-intro -->
                             <!-- /.slider -->
                             <h2 class="wow fadeInUp animated" data-wow-delay=".6s">
-                                Notre concours existe depuis 2008, avec plus de 1200 partipants à l'édition de Janvier
+                                Notre concours existe depuis 2008, avec plus de 1200 participants à l'édition de Janvier
                                 2016,
                                 <br>
                                 il a, depuis sa création, su retenir l'attention de nombreuses entreprises partenaires.

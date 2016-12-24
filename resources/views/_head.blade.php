@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="icon" type="image/png" href="{{ \URL::asset('images/favicon.png') }}">
-    <title>Timer Agency Template</title>
+    <title>Concours Web Challenge</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
@@ -32,6 +32,7 @@
     <!-- responsive css -->
     <link rel="stylesheet" href="{{ \URL::asset('css/responsive.css') }}">
 
+    <!-- Added fontawesome icons using CDN (could be imported into the project) -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
 
 </head>

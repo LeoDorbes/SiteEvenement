@@ -19,17 +19,17 @@
 
                 <div class="form-group">
                      Civilité :
-                     <label for="gender" class="">
-                         <input id="gender" type="radio" name="gender" value="1">M
+                     <label for="gender" class="">M
+                         <input id="gender-1" type="radio" name="gender" value="1">
                      </label>
-                     <label for="gender2" class="">
-                         <input id="gender2" type="radio" name="gender" value="2">Mme
+                     <label for="gender2" class="">Mme
+                         <input id="gender-2" type="radio" name="gender" value="2">
                      </label>
-                     <label for="gender3" class="">
-                         <input id="gender3" type="radio" name="gender" value="3">Mlle
+                     <label for="gender3" class="">Mlle
+                         <input id="gender-3" type="radio" name="gender" value="3">
                      </label>
-                     <label for="gender4" class="">
-                         <input id="gender4" type="radio" name="gender" value="4">Autre
+                     <label for="gender4" class="">Autre
+                         <input id="gender-4" type="radio" name="gender" value="4">
                      </label>
                  </div>
 
@@ -39,17 +39,17 @@
                 <?= Former::text('address')->label(false)->placeholder('Adresse')->required()->class('form-control form-li') ?>
                 <?= Former::text('city')->label(false)->placeholder('Ville')->required()->class('form-control form-li') ?>
                 <?= Former::text('postal_code')->label(false)->placeholder('Code Postal')->required()->class('form-control form-li') ?>
-                <?= Former::select('role')->label("Rôle :")->options(App\Role::getFormList())->class('form-control form-li')->required() ?>
+                <?= Former::select('role_id')->label("Rôle :")->options(App\Role::getFormList())->class('form-control form-li')->required() ?>
 
-                {{--<div class="form-group">--}}
+                <div class="form-group">
                     {{--<div class="checkbox">--}}
 
                         <label for="participate" class="">Pourra participer à l'événement à Paris</label>
-                            <input class="" id="participate" type="checkbox" name="participate"
+                            <input class="form-li registration-button" id="participate" type="checkbox" name="participate"
                                    value="1">
 
                     {{--</div>--}}
-                {{--</div>--}}
+                </div>
 
                 <?= Former::textarea('comment')->label(false)->placeholder('Commentaire')->required()->class('form-control form-li') ?>
 

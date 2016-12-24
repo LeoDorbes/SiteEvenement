@@ -37,7 +37,7 @@ class Registration extends Model
         $this->address = $request->input('address');
         $this->city = $request->input('city');
         $this->postal_code = $request->input('postal_code');
-        $this->role_id = $request->input('role');
+        $this->role_id = $request->input('role_id');
         $this->gender = $request->input('gender');
         $this->participate = $request->input('participate') ? true : false;
         $this->comment = $request->input('comment');

@@ -29,6 +29,7 @@
                             {!! Former::populateField('position', $registration->position) !!}
                             {!! Former::populateField('comment', $registration->comment) !!}
                             {!! Former::populateField('gender', $registration->gender) !!}
+                            {!! Former::populateField('role_id', $registration->role_id) !!}
 
 
                         @else
@@ -38,17 +39,17 @@
                             <div class="col-md-6 col-md-offset-3">
                                 <div class="form-group">
                                     Civilité :
-                                    <label for="gender" class="">
-                                        <input id="gender" type="radio" name="gender" value="1">M
+                                    <label for="gender" class="">M
+                                        <input id="gender" type="radio" name="gender" value=1>
                                     </label>
-                                    <label for="gender2" class="">
-                                        <input id="gender2" type="radio" name="gender" value="2">Mme
+                                    <label for="gender2" class="">Mme
+                                        <input id="gender2" type="radio" name="gender" value=2>
                                     </label>
-                                    <label for="gender3" class="">
-                                        <input id="gender3" type="radio" name="gender" value="3">Mlle
+                                    <label for="gender3" class="">Mlle
+                                        <input id="gender3" type="radio" name="gender" value=3>
                                     </label>
-                                    <label for="gender4" class="">
-                                        <input id="gender4" type="radio" name="gender" value="4">Autre
+                                    <label for="gender4" class="">Autre
+                                        <input id="gender4" type="radio" name="gender" value=4>
                                     </label>
                                 </div>
 
@@ -58,15 +59,15 @@
                                 {!! Former::text('address')->label('Adresse') !!}
                                 {!! Former::text('city')->label('Ville') !!}
                                 {!! Former::text('postal_code')->label('Code postal') !!}
-                                {!! Former::select('role')->options(App\Role::getFormList())->class('form-control form-li')->required() !!}
+                                {!! Former::select('role_id')->options(App\Role::getFormList())->class('form-control form-li')->required() !!}
 
                                 <div class="form-group">
-                                    <div class="checkbox">
-                                        <label for="participate" class="">Pourras participer à l'evenement à Paris
+
+                                        <label for="participate" class="">Pourras participer à l'evenement à Paris</label>
                                             <input class="form-control form-li" id="participate" type="checkbox" name="participate"
                                                    value="1">
-                                        </label>
-                                    </div>
+
+
                                 </div>
 
                                 {!! Former::textarea('comment')->label('Commentaire') !!}

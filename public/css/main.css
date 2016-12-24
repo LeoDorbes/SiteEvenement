@@ -1358,12 +1358,29 @@ p{
 
 #participate {
     position: relative !important;
+    display: inline-block;
+    width: 34px;
 }
 
 .form .form-li {
     margin-bottom: 13px;
     border-radius: 4px;
+    font-size: 17px;
+
 }
+
+.registration-button{
+    transform: scale(1.5) !important;
+    margin-left: 4px !important;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+
 
 /* after subscription */
 
