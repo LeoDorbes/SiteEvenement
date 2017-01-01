@@ -31,7 +31,7 @@ class Registration extends FormRequest
         $rules['city'] =  'required|max:75|min:2';
         $rules['postal_code'] =  'required|max:25|min:2';
         $rules['gender'] =  'required';
-        $rules['participate'] =  '';
+        $rules['participate'] =  'boolean';
         $rules['role_id'] =  'integer|required';
         $rules['comment'] =  'min:1|max:1000';
 

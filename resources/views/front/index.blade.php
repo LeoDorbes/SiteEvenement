@@ -388,7 +388,7 @@ Slider Section Start
                             <p class="wow fadeInDown centered-text" data-wow-delay=".5s" data-wow-duration="500ms">
                                 N'hésitez plus, participez et tentez votre chance. Vous serez peut-être le prochain gagnant!
                             </p>
-                            <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown"
+                            <a href="#" class="btn btn-default btn-contact wow fadeInDown"
                                data-wow-delay=".7s" data-wow-duration="500ms">Contactez-nous</a>
                     </div>
                 </div>

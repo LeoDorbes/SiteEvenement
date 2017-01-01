@@ -73,16 +73,7 @@ class ApiController extends Controller
 
         //Cannot use the Registration request, has to handle errors manually.
         $registration = new Registration();
-        $registration->first_name = $request->input('first_name');
-        $registration->last_name = $request->input('last_name');
-        $registration->email = $request->input('email');
-        $registration->address = $request->input('address');
-        $registration->city = $request->input('city');
-        $registration->postal_code = $request->input('postal_code');
-        $registration->role_id = $request->input('role');
-        $registration->gender = $request->input('gender');
-        $registration->participate = $request->input('participate') ? true : false;
-        $registration->comment = $request->input('comment');
+        $registration->requestFill($request);
 
         $registration->save();
 
@@ -163,14 +154,8 @@ class ApiController extends Controller
         }
 
         //Cannot use the Registration request, has to handle errors manually.
-        $registration->first_name = $request->input('first_name');
-        $registration->last_name = $request->input('last_name');
-        $registration->email = $request->input('email');
-        $registration->address = $request->input('address');
-        $registration->city = $request->input('city');
-        $registration->postal_code = $request->input('postal_code');
-        $registration->position = $request->input('position');
-        $registration->comment = $request->input('comment');
+        dd('hi');
+        $registration->requestFill($request);
 
         $registration->save();
 

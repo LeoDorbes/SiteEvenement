@@ -34,25 +34,16 @@ class FrontController extends Controller
     {
         $registration = new Registration();
 
-
-        $registration->first_name = $request->input('first_name');
-        $registration->last_name = $request->input('last_name');
-        $registration->email = $request->input('email');
-        $registration->address = $request->input('address');
-        $registration->city = $request->input('city');
-        $registration->postal_code = $request->input('postal_code');
-        $registration->role_id = $request->input('role_id');
-        $registration->gender = $request->input('gender');
-        $registration->participate = $request->input('participate') ? true : false;
-        $registration->comment = $request->input('comment');
-
-
-
+        $registration->requestFill($request);
 
         //@todo : Gerer erreur BDD -- ajouter les erreur client / serveur
         $registration->save();
-        return Redirect::route('home')->with('flash_success', 'Votre inscription à bien ete validée. Merci :) ');
+        return view('front/registration_confirmed');
 
+    }
+
+    public function registrationConfirmed(){
+        return view('front/registration_confirmed');
     }
 
     public function login()

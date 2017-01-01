@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 
 class Role extends Model
@@ -31,6 +32,11 @@ class Role extends Model
         }
         return $tab;
 
+    }
+
+    public function requestFill(Request $request){
+
+        $this->name = $request->get('name');
     }
 
 }

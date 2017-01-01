@@ -44,7 +44,7 @@
                                 @else
                                     <a href="{{ route('admin_edit_registration',$registration->id) }}"
                                        class="btn btn-default btn-sm"
-                                       title="Refuser cette inscription"><i class="fa fa-edit"></i></a>
+                                       title="Editer cette inscription"><i class="fa fa-edit"></i></a>
                                     <a href="{{ route('admin_delete_registration_process',$registration->id) }}" class="btn btn-danger btn-sm"
                                        onclick="return confirm('Etes-vous sûr de vouloir supprimer cette inscription?');"
                                        title="Supprimer cette inscription"><i class="fa fa-close"></i></a>

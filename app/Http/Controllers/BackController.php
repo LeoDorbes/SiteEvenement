@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Registration;
+use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -43,7 +44,7 @@ class BackController extends Controller
     }
 
     /*
-     * The list of all the registrations :
+     * REGISTRATIONS :
      */
     public function registrations()
     {
@@ -116,17 +117,7 @@ class BackController extends Controller
         $registration = Registration::find($id);
         if (!$registration) \App::abort(404);
 
-        //$registration->fillRegistration($request);
-        $registration->first_name = $request->input('first_name');
-        $registration->last_name = $request->input('last_name');
-        $registration->email = $request->input('email');
-        $registration->address = $request->input('address');
-        $registration->city = $request->input('city');
-        $registration->postal_code = $request->input('postal_code');
-        $registration->role_id = $request->input('role_id');
-        $registration->gender = $request->input('gender');
-        $registration->participate = $request->input('participate') ? true : false;
-        $registration->comment = $request->input('comment');
+        $registration->requestFill($request);
 
         $registration->save();
         return Redirect::route('admin_registrations')->with('flash_success', 'L\'inscription a bien été modifiée');
@@ -144,18 +135,9 @@ class BackController extends Controller
     public function addRegistrationProcess(\App\Http\Requests\Registration $request)
     {
         $registration = new Registration();
-        $registration->first_name = $request->input('first_name');
-        $registration->last_name = $request->input('last_name');
-        $registration->email = $request->input('email');
-        $registration->address = $request->input('address');
-        $registration->city = $request->input('city');
-        $registration->postal_code = $request->input('postal_code');
-        $registration->role_id = $request->input('role');
-        $registration->gender = $request->input('gender');
-        $registration->participate = $request->input('participate') ? true : false;
-        $registration->comment = $request->input('comment');
 
-        //@todo : Gerer erreur BDD -- ajouter les erreur client / serveur
+        $registration->requestFill($request);
+
         $registration->save();
         return Redirect::route('admin_registrations')->with('flash_success', 'L\'inscription a bien été ajoutée');
 
@@ -168,5 +150,56 @@ class BackController extends Controller
         if (!$registration) \App::abort(404);
         $registration->delete();
         return Redirect::route('admin_registrations')->with('flash_success', 'L\'inscription a bien été supprimée');
+    }
+
+    /*
+     * ROLES :
+     */
+
+    public function roles(){
+        $roles = Role::paginate(10);
+
+        return view('back.roles')->with('roles',$roles);
+    }
+
+    public function addRole(){
+        return view('back.role_form')->with('url', route('admin_add_role_process'));
+    }
+    public function addRoleProcess(\App\Http\Requests\Role $request){
+        $role = new Role();
+        $role->requestFill($request);
+        $role->save();
+        return Redirect::route('admin_roles')->with('flash_success', 'Le rôle a bien été ajouté');
+    }
+
+    public function editRole($id){
+        $role = Role::find($id);
+        if(!$role)return \App::abort(404);
+        return view('back.role_form')->with('url', route('admin_add_role_process',$role->id))->with('role',$role);
+    }
+    public function editRoleProcess(\App\Http\Requests\Role $request,$id){
+
+        $role = Role::find($id);
+        if(!$role)return \App::abort(404);
+        $role->requestFill($request);
+        $role->save();
+        return Redirect::route('admin_roles')->with('flash_success', 'Le rôle a bien été modifié');
+    }
+    public function deleteRoleProcess($id){
+        $role = Role::find($id);
+        if(!$role)return \App::abort(404);
+        $role->delete();
+        return Redirect::route('admin_roles')->with('flash_success', 'Le rôle a bien été supprimé');
+    }
+
+
+    /*
+     * USERS :
+     */
+
+    public function users(){
+        $users = User::paginate(10);
+
+        return view('back.users')->with('users',$users);
     }
 }

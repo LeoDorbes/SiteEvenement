@@ -21,7 +21,7 @@ class CreateRegistrationsTable extends Migration
             $table->string('address');
             $table->string('city');
             $table->string('postal_code');
-            $table->string('position'); 
+            $table->integer('role_id')->nullable();
             $table->text('comment');
             $table->tinyInteger('validate');
             $table->timestamps();

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 
 class Registration extends Model
@@ -29,7 +30,7 @@ class Registration extends Model
         });
     }
 
-    public function fillRegistration(\Illuminate\Http\Request $request){
+    public function requestFill(Request $request){
 
         $this->first_name = $request->input('first_name');
         $this->last_name = $request->input('last_name');
@@ -41,6 +42,7 @@ class Registration extends Model
         $this->gender = $request->input('gender');
         $this->participate = $request->input('participate') ? true : false;
         $this->comment = $request->input('comment');
+
     }
 
 }
