@@ -1320,6 +1320,12 @@ body {
     position: relative;
     top: -19px;
 }
+@media (max-width: 766px) {
+    #logo {
+        top: -30px;
+        width: 54px;
+    }
+}
 
 .txtcenter {
     text-align: center;
