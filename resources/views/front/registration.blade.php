@@ -5,6 +5,8 @@
     <?php
     $registrationRequest = new \App\Http\Requests\Registration();
     $registrationRequestRules = $registrationRequest->rules();
+
+    $gender = old('gender');
     ?>
 
 
@@ -20,16 +22,19 @@
                 <div class="form-group">
                      Civilité :
                      <label for="gender" class="">M
-                         <input id="gender-1" type="radio" name="gender" value="1">
+                         <input id="gender-1" type="radio" name="gender" value="1"
+                                 <?php if($gender == 1)echo 'checked'; ?>
+
+                                 >
                      </label>
                      <label for="gender2" class="">Mme
-                         <input id="gender-2" type="radio" name="gender" value="2">
+                         <input id="gender-2" type="radio" name="gender" value="2" <?php if($gender == 2)echo 'checked'; ?> >
                      </label>
                      <label for="gender3" class="">Mlle
-                         <input id="gender-3" type="radio" name="gender" value="3">
+                         <input id="gender-3" type="radio" name="gender" value="3" <?php if($gender == 3)echo 'checked'; ?> >
                      </label>
                      <label for="gender4" class="">Autre
-                         <input id="gender-4" type="radio" name="gender" value="4">
+                         <input id="gender-4" type="radio" name="gender" value="4" <?php if($gender == 4)echo 'checked'; ?> >
                      </label>
                  </div>
 
@@ -46,7 +51,7 @@
 
                         <label for="participate" class="">Pourra participer à l'événement à Paris</label>
                             <input class="form-li registration-button" id="participate" type="checkbox" name="participate"
-                                   value="1">
+                                   value="1" <?php if(old('participate') == true)echo 'checked'; ?> >
 
                     {{--</div>--}}
                 </div>
