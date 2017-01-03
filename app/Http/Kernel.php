@@ -53,6 +53,7 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
+        'jwt.auth' => 'Tymon\JWTAuth\Middleware\GetUserFromToken',
         'auth' => \App\Http\Middleware\RedirectIfNotAuthenticated::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,

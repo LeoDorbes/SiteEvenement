@@ -184,6 +184,7 @@ return [
          */
         Former\FormerServiceProvider::class,
         'Jenssegers\Date\DateServiceProvider',
+        'Tymon\JWTAuth\Providers\JWTAuthServiceProvider',
 
 
     ],
@@ -240,6 +241,8 @@ return [
          */
         'Former' => 'Former\Facades\Former',
         'Date' => Jenssegers\Date\Date::class,
+        'JWTAuth' => 'Tymon\JWTAuth\Facades\JWTAuth',
+        'JWTFactory' => 'Tymon\JWTAuth\Facades\JWTFactory',
 
 
     ],

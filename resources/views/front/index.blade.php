@@ -31,15 +31,15 @@ Slider Section Start
 
 
                                     @foreach($roles as $role)
-                                       @if($first)
-                                            <b class="is-visible">
-                                           @else
-                                                    <b>
-                                           @endif
-                                       {{ $role }}</b>
+                                            @if($first)
+                                                <b class="is-visible">
+                                                    @else
+                                                        <b>
+                                                            @endif
+                                                            {{ $role }}</b>
 
-                                               <?php $first = false ?>
-                                        @endforeach
+                                                        <?php $first = false ?>
+                                                @endforeach
                                 </span>
                                 </h1>
                             </section>
@@ -122,13 +122,13 @@ Slider Section Start
 
                             <div class="overlay">
                                 <div class="buttons">
-                                    <a rel="gallery" href="images/portfolio/item-1.jpg">Orange</a>
+                                    <a class="fancybox" href="http://www.orange.fr/">Orange</a>
                                 </div>
                             </div>
                         </div>
                         <figcaption>
                             <h4>
-                                <a href="#">
+                                <a href="http://www.orange.fr/">
                                     Orange
                                 </a>
                             </h4>
@@ -147,19 +147,20 @@ Slider Section Start
 
                             <div class="overlay">
                                 <div class="buttons">
-                                    <a rel="gallery" class="fancybox" href="images/portfolio/item-2.png">Laravel</a>
+                                    <a class="fancybox" href="http://laravel.com/">Laravel</a>
                                 </div>
                             </div>
                         </div>
                         <figcaption>
                             <h4>
-                                <a href="#">
+                                <a href="http://laravel.com/">
                                     Laravel
                                 </a>
                             </h4>
 
                             <p>
-                                Premier framework web aux USA, Laravel offre une solution rapide et élégante à beaucoup de problématiques du web aujourd'hui.</br>
+                                Premier framework web aux USA, Laravel offre une solution rapide et élégante à beaucoup
+                                de problématiques du web aujourd'hui.</br>
                                 Partenaire depuis 2013.
                             </p>
                         </figcaption>
@@ -172,13 +173,13 @@ Slider Section Start
 
                             <div class="overlay">
                                 <div class="buttons">
-                                    <a rel="gallery" class="fancybox" href="images/portfolio/item-3.jpg">Github</a>
+                                    <a class="fancybox" href="http://github.com/">Github</a>
                                 </div>
                             </div>
                         </div>
                         <figcaption>
                             <h4>
-                                <a href="#">
+                                <a href="http://github.com/">
                                     Github
                                 </a>
                             </h4>
@@ -197,19 +198,20 @@ Slider Section Start
 
                             <div class="overlay">
                                 <div class="buttons">
-                                    <a rel="gallery" class="fancybox" href="images/portfolio/item-4.jpg">Photoshop</a>
+                                    <a class="fancybox" href="http://www.adobe.com/fr/products/photoshop.html">Photoshop</a>
                                 </div>
                             </div>
                         </div>
                         <figcaption>
                             <h4>
-                                <a href="#">
+                                <a href="http://www.adobe.com/fr/products/photoshop.html">
                                     Photoshop
                                 </a>
                             </h4>
 
                             <p>
-                                Le web-design, ça ne s'invente pas. Photoshop reste le logiciel que nous privilégeons pour réaliser la maquette de votre site.</br>
+                                Le web-design, ça ne s'invente pas. Photoshop reste le logiciel que nous privilégeons
+                                pour réaliser la maquette de votre site.</br>
                                 Partenaire depuis 2011.
                             </p>
                         </figcaption>
@@ -222,19 +224,20 @@ Slider Section Start
 
                             <div class="overlay">
                                 <div class="buttons">
-                                    <a rel="gallery" class="fancybox" href="images/portfolio/item-5.jpg">SourceTree</a>
+                                    <a class="fancybox" href="http://www.sourcetreeapp.com/">SourceTree</a>
                                 </div>
                             </div>
                         </div>
                         <figcaption>
                             <h4>
-                                <a href="#">
+                                <a href="http://www.sourcetreeapp.com/">
                                     Source Tree
                                 </a>
                             </h4>
 
                             <p>
-                                SourceTree est l'interface graphique que nous recommandons pour gérer votre répertoire Git ou Mercurial.
+                                SourceTree est l'interface graphique que nous recommandons pour gérer votre répertoire
+                                Git ou Mercurial.
                                 Concentrez-vous sur l'essentiel : le code.</br>
                                 Partenaire depuis 2013.
                             </p>
@@ -248,20 +251,21 @@ Slider Section Start
 
                             <div class="overlay">
                                 <div class="buttons">
-                                    <a rel="gallery" class="fancybox" href="images/portfolio/item-6.jpg">Docker</a>
+                                    <a class="fancybox" href="https://www.docker.com/">Docker</a>
                                 </div>
                             </div>
                         </div>
                         <figcaption>
                             <h4>
-                                <a href="#">
+                                <a href="http://www.docker.com/">
                                     Docker
                                 </a>
                             </h4>
 
                             <p>
                                 Docker est LA solution qui vous permettra de
-                                garantir la portabilité et la sécurité de vos projets, où que vous deviez les déployer.</br>
+                                garantir la portabilité et la sécurité de vos projets, où que vous deviez les
+                                déployer.</br>
                                 Partenaire depuis 2015.
 
                             </p>
@@ -296,7 +300,7 @@ Slider Section Start
                         <div class="media-body">
                             <h4 class="media-heading">Curiosité</h4>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
+                            <p>“On ne force pas une curiosité, on l’éveille.” Daniel Pennac</p>
                         </div>
                     </div>
                 </div>
@@ -310,7 +314,8 @@ Slider Section Start
                         <div class="media-body">
                             <h4 class="media-heading">Créativité</h4>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
+                            <p>“Chaque enfant est un artiste. Le problème, c'est de rester un artiste lorsqu'on
+                                grandit.” Pablo Picasso</p>
                         </div>
                     </div>
                 </div>
@@ -324,7 +329,8 @@ Slider Section Start
                         <div class="media-body">
                             <h4 class="media-heading">Innovation</h4>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
+                            <p>“L'innovation, c'est une situation qu'on choisit parce qu'on a une passion brûlante pour
+                                quelque chose.” Steve Jobs</p>
                         </div>
                     </div>
                 </div>
@@ -338,7 +344,8 @@ Slider Section Start
                         <div class="media-body">
                             <h4 class="media-heading">Challenge</h4>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
+                            <p>“Gardez toujours à l’esprit que votre propre décision de réussir est plus importante que
+                                n’importe quoi d’autre.” Abraham Lincoln</p>
                         </div>
                     </div>
                 </div>
@@ -352,7 +359,8 @@ Slider Section Start
                         <div class="media-body">
                             <h4 class="media-heading">Esprit d'équipe</h4>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
+                            <p>“Se réunir est un début, rester ensemble est un progrès, travailler ensemble est la
+                                réussite.” Henry Ford</p>
                         </div>
                     </div>
                 </div>
@@ -366,7 +374,8 @@ Slider Section Start
                         <div class="media-body">
                             <h4 class="media-heading">Compréhension</h4>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
+                            <p>“Enseigner la compréhension entre les humains est la condition et le garant de la
+                                solidarité intellectuelle et morale de l'humanité.” Edgar Morin</p>
                         </div>
                     </div>
                 </div>
@@ -384,12 +393,13 @@ Slider Section Start
                 <div class="col-md-12">
                     <div class="block">
                         <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">Alors,
-                            convaincu?</h1>
-                            <p class="wow fadeInDown centered-text" data-wow-delay=".5s" data-wow-duration="500ms">
-                                N'hésitez plus, participez et tentez votre chance. Vous serez peut-être le prochain gagnant!
-                            </p>
-                            <a href="#" class="btn btn-default btn-contact wow fadeInDown"
-                               data-wow-delay=".7s" data-wow-duration="500ms">Contactez-nous</a>
+                            convaincu?</h2>
+
+                        <p class="wow fadeInDown centered-text" data-wow-delay=".5s" data-wow-duration="500ms">
+                            N'hésitez plus, participez et tentez votre chance. Vous serez peut-être le prochain gagnant!
+                        </p>
+                        <a href="{{ route('registration') }}" class="btn btn-default btn-contact wow fadeInDown"
+                           data-wow-delay=".7s" data-wow-duration="500ms">Inscrivez-vous</a>
                     </div>
                 </div>
 

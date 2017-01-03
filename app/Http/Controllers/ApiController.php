@@ -5,19 +5,33 @@ namespace App\Http\Controllers;
 use App\Registration;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
+use Tymon\JWTAuth\Exceptions\JWTException;
+use Tymon\JWTAuth\Facades\JWTAuth;
 use Validator;
 
 
 class ApiController extends Controller
 {
 
+
+
+    public function __construct()
+    {
+        //$this->middleware('jwt.auth');
+    }
+
+    public function checkAuth(){
+        $user = JWTAuth::parseToken()->toUser();
+    }
+
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resources.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
+        $this->checkAuth();
         $registrations = Registration::all();
         return response()->json($registrations);
     }
@@ -31,6 +45,7 @@ class ApiController extends Controller
      */
     public function create()
     {
+
         //We get the ruleset from here, so we don't have to write it twice :
         $registrationRequest = new \App\Http\Requests\Registration();
         $registrationRequestRules = $registrationRequest->rules();
@@ -49,6 +64,7 @@ class ApiController extends Controller
      */
     public function store(Request $request)
     {
+        $this->checkAuth();
         //We get the ruleset from here, so we don't have to write it twice :
         $registrationRequest = new \App\Http\Requests\Registration();
         $registrationRequestRules = $registrationRequest->rules();
@@ -92,6 +108,7 @@ class ApiController extends Controller
      */
     public function show($id)
     {
+        $this->checkAuth();
         $registration = Registration::find($id);
         if (!$registration) \Abort(404);
 
@@ -107,6 +124,7 @@ class ApiController extends Controller
      */
     public function edit($id)
     {
+        $this->checkAuth();
         //We get the ruleset from here, so we don't have to write it twice :
         $registrationRequest = new \App\Http\Requests\Registration();
         $registrationRequestRules = $registrationRequest->rules();
@@ -128,6 +146,7 @@ class ApiController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->checkAuth();
         $registration = Registration::find($id);
         if(!$registration)\App::abort(404);
 
@@ -152,7 +171,6 @@ class ApiController extends Controller
 
             return Response::json($errorArray, 400);
         }
-
         //Cannot use the Registration request, has to handle errors manually.
         dd('hi');
         $registration->requestFill($request);
@@ -163,7 +181,6 @@ class ApiController extends Controller
             'status' => "success",
             'message' => "200 OK - Updated"
         ], 200);
-
     }
 
     /**
@@ -174,6 +191,7 @@ class ApiController extends Controller
      */
     public function destroy($id)
     {
+        $this->checkAuth();
         $registration = Registration::find($id);
         if (!$registration) \Abort(404);
 

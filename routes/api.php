@@ -20,6 +20,7 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:api');
 */
 
+Route::post('/login', ['as' => 'api_login', 'uses' => 'ApiLoginController@login']);
 
 Route::get('/registrations', ['as' => 'registration_index', 'uses' => 'ApiController@index']);
 Route::get('/registration/create', ['as' => 'registration_create', 'uses' => 'ApiController@create']);

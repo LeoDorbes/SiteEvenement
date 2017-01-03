@@ -14,7 +14,7 @@
             <div class="col-sm-offset-3 col-sm-6">
                 <h2> S'inscrire au concours </h2>
                 <?= Former::open_vertical(route('registration_process'))->method('POST')
-                        ->rules($registrationRequestRules)
+                        //->rules($registrationRequestRules)
                         ->class('form_horizontal') ?>
 
                 <div class="form-group">
@@ -33,13 +33,13 @@
                      </label>
                  </div>
 
-                <?= Former::text('first_name')->label(false)->placeholder('Prénom')->required()->class('form-control form-li') ?>
-                <?= Former::text('last_name')->label(false)->placeholder('Nom')->required()->class('form-control form-li') ?>
-                <?= Former::email('email')->label(false)->placeholder('Email')->required()->class('form-control form-li') ?>
-                <?= Former::text('address')->label(false)->placeholder('Adresse')->required()->class('form-control form-li') ?>
-                <?= Former::text('city')->label(false)->placeholder('Ville')->required()->class('form-control form-li') ?>
-                <?= Former::text('postal_code')->label(false)->placeholder('Code Postal')->required()->class('form-control form-li') ?>
-                <?= Former::select('role_id')->label("Rôle :")->options(App\Role::getFormList())->class('form-control form-li')->required() ?>
+                <?= Former::text('first_name')->label(false)->placeholder('Prénom')->class('form-control form-li') ?>
+                <?= Former::text('last_name')->label(false)->placeholder('Nom')->class('form-control form-li') ?>
+                <?= Former::email('email')->label(false)->placeholder('Email')->class('form-control form-li') ?>
+                <?= Former::text('address')->label(false)->placeholder('Adresse')->class('form-control form-li') ?>
+                <?= Former::text('city')->label(false)->placeholder('Ville')->class('form-control form-li') ?>
+                <?= Former::text('postal_code')->label(false)->placeholder('Code Postal')->class('form-control form-li') ?>
+                <?= Former::select('role_id')->label("Rôle :")->options(App\Role::getFormList())->class('form-control form-li') ?>
 
                 <div class="form-group">
                     {{--<div class="checkbox">--}}
@@ -51,7 +51,7 @@
                     {{--</div>--}}
                 </div>
 
-                <?= Former::textarea('comment')->label(false)->placeholder('Commentaire')->required()->class('form-control form-li') ?>
+                <?= Former::textarea('comment')->label(false)->placeholder('Commentaire')->class('form-control form-li') ?>
 
 
                 <button type="submit" class="btn btn-primary" id="subscribe-button">
