@@ -22,6 +22,7 @@ class ApiController extends Controller
 
     public function checkAuth(){
         $user = JWTAuth::parseToken()->toUser();
+
     }
 
     /**
