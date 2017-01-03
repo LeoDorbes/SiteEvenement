@@ -1362,6 +1362,22 @@ p{
     height: 850px;
 }
 
+@media (max-width: 1100px) and (min-width: 763px) {
+    .subscription-form {
+    padding-top: 10% !important;
+        }
+}
+@media (max-width: 762px) and (min-width: 500px) {
+  .subscription-form {
+    padding-top: 15% !important;
+        }
+    }
+    @media (max-width: 499px) {
+  .subscription-form {
+    padding-top: 27% !important;
+        }
+    }
+
 #participate {
     position: relative !important;
     display: inline-block;
