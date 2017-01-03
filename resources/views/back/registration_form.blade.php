@@ -32,6 +32,7 @@
                             {!! Former::populateField('role_id', $registration->role_id) !!}
 
 
+
                         @else
 
                         @endif
@@ -40,16 +41,16 @@
                                 <div class="form-group">
                                     Civilité :
                                     <label for="gender" class="">M
-                                        <input id="gender" type="radio" name="gender" value=1>
+                                        <input id="gender" type="radio" name="gender" value=1 <?php if(isset($registration))if($registration->gender == 1)echo 'checked' ?> >
                                     </label>
                                     <label for="gender2" class="">Mme
-                                        <input id="gender2" type="radio" name="gender" value=2>
+                                        <input id="gender2" type="radio" name="gender" value=2 <?php if(isset($registration))if($registration->gender == 2)echo 'checked' ?>>
                                     </label>
                                     <label for="gender3" class="">Mlle
-                                        <input id="gender3" type="radio" name="gender" value=3>
+                                        <input id="gender3" type="radio" name="gender" value=3 <?php if(isset($registration))if($registration->gender == 3)echo 'checked' ?>>
                                     </label>
                                     <label for="gender4" class="">Autre
-                                        <input id="gender4" type="radio" name="gender" value=4>
+                                        <input id="gender4" type="radio" name="gender" value=4 <?php if(isset($registration))if($registration->gender == 4)echo 'checked' ?>>
                                     </label>
                                 </div>
 
@@ -65,8 +66,7 @@
 
                                         <label for="participate" class="">Pourras participer à l'evenement à Paris</label>
                                             <input class="form-control form-li" id="participate" type="checkbox" name="participate"
-                                                   value="1">
-
+                                                   value="1" <?php if(isset($registration))if($registration->participate == true)echo 'checked' ?> >
 
                                 </div>
 

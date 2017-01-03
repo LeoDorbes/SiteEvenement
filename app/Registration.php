@@ -42,7 +42,12 @@ class Registration extends Model
         $this->gender = $request->input('gender');
         $this->participate = $request->input('participate') ? true : false;
         $this->comment = $request->input('comment');
-
     }
+
+    public function role()
+    {
+        return $this->belongsTo('App\Role');
+    }
+
 
 }
